@@ -1,0 +1,9 @@
+.chapter-block {
+    border-radius: .8em;
+    background-color: #5D67E8;
+    width: fit-content;
+    padding: 4px 10px;
+    color: white !important;
+    cursor: pointer;
+    font-size: 16px;
+}

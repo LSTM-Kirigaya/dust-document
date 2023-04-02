@@ -1,0 +1,1 @@
+scp -r .\.vuepress\dist\* root@101.43.239.71:/usr/share/nginx/document
