@@ -13,7 +13,7 @@ export default defineUserConfig({
     },
     head: [
         ['link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css' }],
-        ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css' }],
+        ['link', { rel: 'stylesheet', href: 'https://cdn.bootcdn.net/ajax/libs/github-markdown-css/2.2.1/github-markdown.min.css' }],
     ],
     theme: recoTheme({
         style: "@vuepress-reco/style-default",
@@ -22,7 +22,57 @@ export default defineUserConfig({
 
         // series 为原 sidebar
         series: {
-            "/blogs/main/system-for-ai.html": [
+            "/blogs/no-longer-human/main.html": [
+                {
+                    text: "目录",
+                    children: [
+                        "/docs/no-longer-human/chapter1",
+                        "/docs/no-longer-human/chapter2",
+                        "/docs/no-longer-human/chapter3",
+                        "/docs/no-longer-human/chapter4",
+                        "/docs/no-longer-human/chapter5",
+                    ]
+                }
+            ],
+            "/blogs/counseling-psychology/main.html" : [
+                {
+                    text: "目录",
+                    children: [
+                        "/docs/counseling-psychology/chapter1/",
+                        "/docs/counseling-psychology/chapter2/",
+                        "/docs/counseling-psychology/chapter3/",
+                        "/docs/counseling-psychology/chapter4/",
+                        "/docs/counseling-psychology/chapter5/",
+                        "/docs/counseling-psychology/chapter6/",
+                        "/docs/counseling-psychology/chapter7/"
+                    ]
+                }
+            ],
+            "/docs/counseling-psychology/chapter1/": [
+                {
+                    text: "第一章 目录",
+                    children: [
+                        "s1",
+                        "s2",
+                        "s3",
+                        "s4",
+                        "s5",
+                    ]
+                }
+            ],
+            "/docs/counseling-psychology/chapter2/": [
+                {
+                    text: "第二章 目录",
+                    children: [
+                        "s1",
+                        "s2",
+                        "s3",
+                        "s4",
+                        "s5",
+                    ]
+                }
+            ],
+            "/blogs/system-for-ai/main.html": [
                 {
                     text: "目录",
                     children: [
@@ -189,7 +239,7 @@ export default defineUserConfig({
                     ]
                 }
             ],
-            "/blogs/pa/nuaa-ics-pa-2023.html": [
+            "/blogs/nuaa-ics-pa-2023/main.html": [
                 {
                     text: "目录",
                     children: [
