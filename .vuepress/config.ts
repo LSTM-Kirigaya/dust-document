@@ -14,6 +14,7 @@ export default defineUserConfig({
     head: [
         ['link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css' }],
         ['link', { rel: 'stylesheet', href: 'https://cdn.bootcdn.net/ajax/libs/github-markdown-css/2.2.1/github-markdown.min.css' }],
+        ['script', { src: 'https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js'}],
     ],
     theme: recoTheme({
         style: "@vuepress-reco/style-default",

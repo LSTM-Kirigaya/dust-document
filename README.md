@@ -5,7 +5,7 @@ modules:
   - MdContent
   - Blog
 bannerBrand:
-  bgImage: '/bg.svg'
+  bgImage: 'https://picx.zhimg.com/80/v2-663cb165be332025450602a238c16398_1440w.png'
   bgImageStyle: {
     height: '600px'
   }
