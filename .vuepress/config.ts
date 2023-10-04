@@ -31,10 +31,22 @@ export default defineUserConfig({
                         "/docs/no-longer-human/chapter3",
                         "/docs/no-longer-human/chapter4",
                         "/docs/no-longer-human/chapter5",
-                    ]
-                }
+                    ],
+                },
             ],
-            "/blogs/counseling-psychology/main.html" : [
+            "/docs/no-longer-human/": [
+                {
+                    text: "目录",
+                    children: [
+                        "chapter1",
+                        "chapter2",
+                        "chapter3",
+                        "chapter4",
+                        "chapter5",
+                    ],
+                },
+            ],
+            "/blogs/counseling-psychology/main.html": [
                 {
                     text: "目录",
                     children: [
@@ -274,7 +286,136 @@ export default defineUserConfig({
                         "ScoringRule1.2"
                     ]
                 }
-            ]
+            ],
+            "/blogs/lake/main.html": [
+                {
+                    text: "目录",
+                    children: [
+                        "/docs/lake/chapter1",
+                        "/docs/lake/chapter2",
+                        "/docs/lake/chapter3",
+                        "/docs/lake/chapter4",
+                        "/docs/lake/chapter5",
+                        "/docs/lake/chapter6",
+                        "/docs/lake/chapter7",
+                        "/docs/lake/chapter8",
+                        "/docs/lake/chapter9",
+                        "/docs/lake/chapter10",
+                        "/docs/lake/chapter11",
+                        "/docs/lake/chapter12",
+                    ],
+                },
+
+            ],
+            "/docs/lake/": [
+                {
+                    text: "目录",
+                    children: [
+                        "chapter1",
+                        "chapter2",
+                        "chapter3",
+                        "chapter4",
+                        "chapter5",
+                        "chapter6",
+                        "chapter7",
+                        "chapter8",
+                        "chapter9",
+                        "chapter10",
+                        "chapter11",
+                        "chapter12",
+                    ],
+                },
+            ],
+            "/blogs/snow-country/main.html": [
+                {
+                    text: "目录",
+                    children: [
+                        "/docs/snow-country/chapter1",
+                        "/docs/snow-country/chapter2",
+                        "/docs/snow-country/chapter3",
+                        "/docs/snow-country/chapter4",
+                        "/docs/snow-country/chapter5",
+                        "/docs/snow-country/chapter6",
+                        "/docs/snow-country/chapter7",
+                        "/docs/snow-country/chapter8",
+                        "/docs/snow-country/chapter9",
+                        "/docs/snow-country/chapter10",
+                        "/docs/snow-country/chapter11",
+                        "/docs/snow-country/chapter12",
+                    ],
+                },
+            ],
+            "/docs/snow-country/": [
+                {
+                    text: "目录",
+                    children: [
+                        "chapter1",
+                        "chapter2",
+                        "chapter3",
+                        "chapter4",
+                        "chapter5",
+                        "chapter6",
+                        "chapter7",
+                        "chapter8",
+                        "chapter9",
+                        "chapter10",
+                        "chapter11",
+                        "chapter12",
+                    ],
+                },
+            ],
+            "/blogs/thousand-cranes/main.html": [
+                {
+                    text: "目录",
+                    children: [
+                        "/docs/thousand-cranes/chapter1",
+                        "/docs/thousand-cranes/chapter2",
+                        "/docs/thousand-cranes/chapter3",
+                        "/docs/thousand-cranes/chapter4",
+                        "/docs/thousand-cranes/chapter5",
+                        "/docs/thousand-cranes/chapter6",
+                        "/docs/thousand-cranes/chapter7",
+                        "/docs/thousand-cranes/chapter8",
+                        "/docs/thousand-cranes/chapter9",
+                        "/docs/thousand-cranes/chapter10",
+                        "/docs/thousand-cranes/chapter11",
+                        "/docs/thousand-cranes/chapter12",
+                        "/docs/thousand-cranes/chapter13",
+                        "/docs/thousand-cranes/chapter14",
+                        "/docs/thousand-cranes/chapter15",
+                        "/docs/thousand-cranes/chapter16",
+                        "/docs/thousand-cranes/chapter17",
+                        "/docs/thousand-cranes/chapter18",
+                        "/docs/thousand-cranes/chapter19",
+                    ],
+                },
+            ],
+            "/docs/thousand-cranes/": [
+                {
+                    text: "目录",
+                    children: [
+                        "chapter1",
+                        "chapter2",
+                        "chapter3",
+                        "chapter4",
+                        "chapter5",
+                        "chapter6",
+                        "chapter7",
+                        "chapter8",
+                        "chapter9",
+                        "chapter10",
+                        "chapter11",
+                        "chapter12",
+                        "chapter13",
+                        "chapter14",
+                        "chapter15",
+                        "chapter16",
+                        "chapter17",
+                        "chapter18",
+                        "chapter19",
+                    ],
+                },
+            ],
         },
         navbar: [
             { text: "首页", link: "/" },

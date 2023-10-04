@@ -8,7 +8,6 @@ categories:
 tags:
  - 日本文学
  - 太宰治
-
 isShowTitleInHome: true
 actionText: About
 ---
@@ -27,9 +26,3 @@ actionText: About
 日本文学总是给我带来一种奇特的感觉，从《雪国》中叶子华丽的死亡，到《人间失格》中叶藏看似荒诞的结局与更为荒诞的心境，美丽的残酷、艺术的荒诞尽收眼底。而我，往往将这些故事归结为某种“社会性不自洽”，
 
 我擅作主张将这部小说划分成了五个章节，还请诸位读者谅解。
-
-- [第一章 三张照片](../../docs/no-longer-human/chapter1.md)
-- [第二章 手记 1](../../docs/no-longer-human/chapter2.md)
-- [第三章 手记 2](../../docs/no-longer-human/chapter3.md)
-- [第四章 手记 3](../../docs/no-longer-human/chapter4.md)
-- [第五章 后记](../../docs/no-longer-human/chapter5.md)
