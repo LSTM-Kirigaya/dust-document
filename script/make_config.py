@@ -4,7 +4,6 @@ from typing import List
 import re
 
 import json5
-from pprint import pprint
 
 
 BLOG_HOME = 'blogs'
