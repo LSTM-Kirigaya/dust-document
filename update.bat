@@ -1,1 +1,1 @@
-scp -r .\.vuepress\dist\* root@101.43.239.71:/usr/share/nginx/document
+scp -r .\.vuepress\dist\* ubuntu@101.43.239.71:/home/ubuntu/website/dust-document
