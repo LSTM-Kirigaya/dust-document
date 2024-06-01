@@ -451,8 +451,6 @@ export default defineUserConfig({
                     children: [
                         "/docs/cpp-features/0",
                         "/docs/cpp-features/1",
-                        "/docs/cpp-features/2",
-                        "/docs/cpp-features/3",
                         "/docs/cpp-features/4",
                         "/docs/cpp-features/5",
                         "/docs/cpp-features/6",
@@ -474,8 +472,6 @@ export default defineUserConfig({
                     children: [
                         "0",
                         "1",
-                        "2",
-                        "3",
                         "4",
                         "5",
                         "6",
@@ -488,6 +484,28 @@ export default defineUserConfig({
                         "13",
                         "14",
                         "15",
+                    ],
+                },
+            ],
+            "/blogs/lagrange.onebot/main.html": [
+                {
+                    text: "目录",
+                    children: [
+                        "/docs/lagrange.onebot/0",
+                        "/docs/lagrange.onebot/1",
+                        "/docs/lagrange.onebot/2",
+                        "/docs/lagrange.onebot/3",
+                    ],
+                },
+            ],
+            "/docs/lagrange.onebot/": [
+                {
+                    text: "目录",
+                    children: [
+                        "0",
+                        "1",
+                        "2",
+                        "3",
                     ],
                 },
             ],
