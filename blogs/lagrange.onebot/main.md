@@ -21,7 +21,7 @@ actionText: About
 基于 Lagrange.Core 实现的 NTQQ 接入框架。
 
 - [github 项目地址](https://github.com/LSTM-Kirigaya/Lagrange.onebot)
-- [npmjs 地址]()
+- [npmjs 地址](https://www.npmjs.com/package/lagrange.onebot)
 
 ## npmjs
 
@@ -37,7 +37,7 @@ yarn add lagrange.onebot
 
 <table>
 <tr>
-  <td><a href="https://github.com/LagrangeDev/Lagrange.Core">Lagrange.onebot</a></td>
+  <td><a href="https://github.com/LSTM-Kirigaya/Lagrange.onebot">Lagrange.onebot</a></td>
   <td> TypeScript 实现轻量级 OneBot 协议的机器人框架（👈你在这里</td>
 </tr>
 <tr>
