@@ -1,0 +1,235 @@
+:root {
+    --animation-7s: .7s cubic-bezier(0.23, 1, 0.32, 1);
+    --animation-5s: .5s cubic-bezier(0.23, 1, 0.32, 1);
+    --animation-3s: .35s cubic-bezier(0.23, 1, 0.32, 1);
+    --base-font: "NerdFontMono";
+    --monospace-font: 'Cascadia code';
+}
+
+.chapter-block {
+    background-color: #5D67E8;
+    width: fit-content;
+    padding: 4px 10px;
+    color: white !important;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+@font-face {
+    font-family: "Cascadia code";
+    src: url("./CascadiaCode.woff2");
+}
+
+@font-face {
+    font-family: "NerdFontMono";
+    src: url("./RobotoSlab-Regular.ttf");
+}
+
+
+@keyframes loading-mask {
+    0% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    font-family: var(--base-font);
+}
+
+pre, code {
+    font-family: var(--monospace-font), "Courier New", monospace !important;
+}
+
+pre > code {
+    font-family: var(--monospace-font), "Courier New", monospace !important;
+}
+
+pre > code > span {
+    font-family: var(--monospace-font), "Courier New", monospace !important;
+}
+
+
+
+
+pre[class*=language-]:after {
+    right: .75em;
+    left: auto;
+    -webkit-transform: rotate(2deg);
+    -moz-transform: rotate(2deg);
+    -ms-transform: rotate(2deg);
+    -o-transform: rotate(2deg);
+    transform: rotate(2deg)
+}
+
+.token.block-comment,
+.token.cdata,
+.token.comment,
+.token.doctype,
+.token.prolog {
+    color: #7d8b99 !important;
+    font-family: var(--monospace-font), "Courier New", monospace !important;
+}
+
+.token.punctuation {
+    color: #9956c2 !important;
+    font-family: var(--monospace-font), "Courier New", monospace !important;
+}
+
+.token.boolean,
+.token.constant,
+.token.deleted,
+.token.function-name,
+.token.property,
+.token.symbol,
+.token.tag {
+    color: #d06666 !important;
+    font-family: var(--monospace-font), "Courier New", monospace !important;
+}
+
+.token.number {
+    color: rgb(179, 116, 0) !important;
+    font-family: var(--monospace-font), "Courier New", monospace !important;
+}
+
+.token.attr-name,
+.token.builtin,
+.token.char,
+.token.inserted,
+.token.string {
+    color: #39a614 !important;
+    font-family: var(--monospace-font), "Courier New", monospace !important;
+}
+
+.token.selector {
+    color: #bf854e !important;
+    font-family: var(--monospace-font), "Courier New", monospace !important;
+}
+
+.token.function {
+    color: #42A5F5 !important;
+    font-family: var(--monospace-font), "Courier New", monospace !important;
+}
+
+.token.entity,
+.token.operator,
+.token.url {
+    color: #a67f59 !important;
+    font-family: var(--monospace-font), "Courier New", monospace !important;
+}
+
+.token.variable {
+    color: #E06C75 !important;
+    font-family: var(--monospace-font), "Courier New", monospace !important;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.class-name {
+    color: #1990b8 !important;
+    font-family: var(--monospace-font), "Courier New", monospace !important;
+}
+
+.token.keyword {
+    color: #9b52f9 !important;
+    font-family: var(--monospace-font), "Courier New", monospace !important;
+}
+
+.token.important,
+.token.regex {
+    color: #e90 !important;
+    font-family: var(--monospace-font), "Courier New", monospace !important;
+}
+
+.language-css .token.string,
+.style .token.string {
+    color: #a67f59 !important;
+    font-family: var(--monospace-font), "Courier New", monospace !important;
+}
+
+.__live2d-toolbox-item {
+    overflow: hidden;
+}

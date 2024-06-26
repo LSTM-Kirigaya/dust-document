@@ -18,20 +18,38 @@ actionText: About
 
 ## Lagrange.onebot
 
-基于 Lagrange.Core 实现的 NTQQ 接入框架。
+基于 Lagrange.Core 实现的 NTQQ 接入框架。Github 和 NpmJS 的链接如下
 
-- [github 项目地址](https://github.com/LSTM-Kirigaya/Lagrange.onebot)
-- [npmjs 地址](https://www.npmjs.com/package/lagrange.onebot)
+<detail-url
+    href="https://github.com/LSTM-Kirigaya/Lagrange.onebot"
+    logo="github"
+    title="LSTM-Kirigaya/Lagrange.onebot"
+    desc="https://github.com/LSTM-Kirigaya/Lagrange.onebot"
+></detail-url>
 
-## npmjs
+<detail-url
+    href="https://www.npmjs.com/package/lagrange.onebot"
+    logo="npm"
+    title="lagrange.onebot - npm"
+    desc="https://www.npmjs.com/package/lagrange.onebot"
+></detail-url>
 
+## 安装
+
+:::: code-group
+::: code-group-item NPM
 ```bash
-# npm
 npm install lagrange.onebot
-
-# yarn
+```
+:::
+::: code-group-item YARN
+```bash
 yarn add lagrange.onebot
 ```
+:::
+::::
+
+
 
 ## 相关项目
 

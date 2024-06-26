@@ -11,6 +11,12 @@ export default defineUserConfig({
         md.use(katex);
         md.linkify.set({ fuzzyEmail: false });
     },
+    shouldPrefetch: false,
+    
+    head: [
+        ['script', { src: 'https://cdn.jsdelivr.net/npm/live2d-render@0.0.5/bundle.js'}],
+        ['script', { src: '/live2d.js' }],
+    ],
     // head: [
     //     ['link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css' }],
     //     ['link', { rel: 'stylesheet', href: 'https://cdn.bootcdn.net/ajax/libs/github-markdown-css/2.2.1/github-markdown.min.css' }],
@@ -506,6 +512,34 @@ export default defineUserConfig({
                         "1",
                         "2",
                         "3",
+                    ],
+                },
+            ],
+            "/blogs/live2d-render/main.html": [
+                {
+                    text: "目录",
+                    children: [
+                        "/docs/live2d-render/static-html",
+                        "/docs/live2d-render/spa-install",
+                        "/docs/live2d-render/hexo-install",
+                        "/docs/live2d-render/hugo-install",
+                        "/docs/live2d-render/vuepress-install",
+                        "/docs/live2d-render/major-function",
+                        "/docs/live2d-render/optimize",
+                    ],
+                },
+            ],
+            "/docs/live2d-render/": [
+                {
+                    text: "目录",
+                    children: [
+                        "static-html",
+                        "spa-install",
+                        "hexo-install",
+                        "hugo-install",
+                        "vuepress-install",
+                        "major-function",
+                        "optimize",
                     ],
                 },
             ],
