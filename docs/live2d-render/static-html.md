@@ -43,7 +43,7 @@ title: 静态 HTML 下的安装（native）
             BackgroundRGBA: [0.0, 0.0, 0.0, 0.0],
 
             // live2d 的 model3.json 文件的相对路径
-            ResourcesPath: './cat/sdwhite cat b.model3.json',
+            ResourcesPath: '/cat/sdwhite cat b.model3.json',
 
             // live2d 的大小
             CanvasSize: {

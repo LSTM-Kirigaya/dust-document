@@ -40,7 +40,7 @@ live2d.initializeLive2D({
 
 ## 压缩材质文件
 
-indexDB 虽然可以做大优化二次加载，但是无法优化首屏加载，为了让用户第一次加载就能获得很好的
+indexDB 虽然可以做大优化二次加载，但是无法优化首屏加载，为了让用户第一次加载就能获得很好的体验，我们可以对材质文件的大小进行优化。
 
 live2d 主要的大小除了 `model3.json` 模型控制点描述文件外，最大的一般是材质文件，也就是 `model3.json` 文件中定义的 `FileReferences.Textures` 路径。比如我的是：
 
@@ -63,8 +63,21 @@ live2d 主要的大小除了 `model3.json` 模型控制点描述文件外，最�
 # pip install imageio
 import imageio
 
-image = imageio.imread_v2('stardust.png')  
-imageio.imwrite('stardust.webp', image, format='webp')  
+image = imageio.imread_v2('SDwhite cat B.4096/texture_00.png')  
+imageio.imwrite('SDwhite cat B.4096/texture_00.webp', image, format='webp')  
+```
+
+然后将上述的 model3.json 中的材质文件路径改成 webp 的
+
+```json
+{
+    "FileReferences": {
+		"Moc": "SDwhite cat B.moc3",
+		"Textures": [
+			"SDwhite cat B.4096/texture_00.webp"
+		],
+    }
+}
 ```
 
 Live2dRender 内部自动支持对于 webp 的请求和解析，不用太担心。

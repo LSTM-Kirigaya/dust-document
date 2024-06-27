@@ -80,9 +80,7 @@ live2d.revealMessageBox();
 
 只需要控制 `Id` 为指定参数，就能实现对应表情，因此，你可以自己编写表情文件。
 
-程序中，你可以通过如下
-
-比如你有一个表情文件叫做 `M baiyan.exp3.json`，你可以如此让你的模型装载这个表情：
+程序中，你可以通过 `setExpression` 来设置表情，比如你有一个表情文件叫做 `M baiyan.exp3.json`，你可以如此让你的模型装载这个表情：
 
 ```js
 live2d.setExpression('M baiyan');
