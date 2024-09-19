@@ -545,6 +545,250 @@ export default defineUserConfig({
                     ],
                 },
             ],
+            "/blogs/rust-tutorial/main.html": [
+                {
+                    text: "目录",
+                    children: [
+                        "/docs/rust-tutorial/foreword",
+                        "/docs/rust-tutorial/ch00-00-introduction",
+                        "/docs/rust-tutorial/ch01-00-getting-started",
+                        "/docs/rust-tutorial/ch02-00-guessing-game-tutorial",
+                        "/docs/rust-tutorial/ch03-00-common-programming-concepts",
+                        "/docs/rust-tutorial/ch04-00-understanding-ownership",
+                        "/docs/rust-tutorial/ch05-00-structs",
+                        "/docs/rust-tutorial/ch06-00-enums",
+                        "/docs/rust-tutorial/ch07-00-managing-growing-projects-with-packages-crates-and-modules",
+                        "/docs/rust-tutorial/ch08-00-common-collections",
+                        "/docs/rust-tutorial/ch09-00-error-handling",
+                        "/docs/rust-tutorial/ch10-00-generics",
+                        "/docs/rust-tutorial/ch11-00-testing",
+                        "/docs/rust-tutorial/ch12-00-an-io-project",
+                        "/docs/rust-tutorial/ch13-00-functional-features",
+                        "/docs/rust-tutorial/ch14-00-more-about-cargo",
+                        "/docs/rust-tutorial/ch15-00-smart-pointers",
+                        "/docs/rust-tutorial/ch16-00-concurrency",
+                        "/docs/rust-tutorial/ch17-00-oop",
+                        "/docs/rust-tutorial/ch18-00-patterns",
+                        "/docs/rust-tutorial/ch19-00-advanced-features",
+                        "/docs/rust-tutorial/ch20-00-final-project-a-web-server",
+                        "/docs/rust-tutorial/appendix-00"
+                    ]
+                }
+            ],
+            "/docs/rust-tutorial/": [
+                {
+                    text: "简介",
+                    children: [
+                        "ch00-00-introduction",
+                    ],
+                },
+                {
+                    text: "入门指南",
+                    children: [
+                        "ch01-00-getting-started",
+                        "ch01-01-installation",
+                        "ch01-02-hello-world",
+                        "ch01-03-hello-cargo",
+                    ],
+                },
+                {
+                    text: "写个猜数字游戏",
+                    children: [
+                        "ch02-00-guessing-game-tutorial",
+                    ],
+                },
+                {
+                    text: "常见编程概念",
+                    children: [
+                        "ch03-00-common-programming-concepts",
+                        "ch03-01-variables-and-mutability",
+                        "ch03-02-data-types",
+                        "ch03-03-how-functions-work",
+                        "ch03-04-comments",
+                        "ch03-05-control-flow",
+                    ],
+                },
+                {
+                    text: "认识所有权",
+                    children: [
+                        "ch04-00-understanding-ownership",
+                        "ch04-01-what-is-ownership",
+                        "ch04-02-references-and-borrowing",
+                        "ch04-03-slices",
+                    ],
+                },
+                {
+                    text: "使用结构体组织相关联的数据",
+                    children: [
+                        "ch05-00-structs",
+                        "ch05-01-defining-structs",
+                        "ch05-02-example-structs",
+                        "ch05-03-method-syntax",
+                    ],
+                },
+                {
+                    text: "枚举和模式匹配",
+                    children: [
+                        "ch06-00-enums",
+                        "ch06-01-defining-an-enum",
+                        "ch06-02-match",
+                        "ch06-03-if-let",
+                    ],
+                },
+                {
+                    text: "使用包、Crate 和模块管理不断增长的项目",
+                    children: [
+                        "ch07-00-managing-growing-projects-with-packages-crates-and-modules",
+                        "ch07-01-packages-and-crates",
+                        "ch07-02-defining-modules-to-control-scope-and-privacy",
+                        "ch07-03-paths-for-referring-to-an-item-in-the-module-tree",
+                        "ch07-04-bringing-paths-into-scope-with-the-use-keyword",
+                        "ch07-05-separating-modules-into-different-files",
+                    ],
+                },
+                {
+                    text: "常见集合",
+                    children: [
+                        "ch08-00-common-collections",
+                        "ch08-01-vectors",
+                        "ch08-02-strings",
+                        "ch08-03-hash-maps",
+                    ],
+                },
+                {
+                    text: "错误处理",
+                    children: [
+                        "ch09-00-error-handling",
+                        "ch09-01-unrecoverable-errors-with-panic",
+                        "ch09-02-recoverable-errors-with-result",
+                        "ch09-03-to-panic-or-not-to-panic",
+                    ],
+                },
+                {
+                    text: "泛型、Trait 和生命周期",
+                    children: [
+                        "ch10-00-generics",
+                        "ch10-01-syntax",
+                        "ch10-02-traits",
+                        "ch10-03-lifetime-syntax",
+                    ],
+                },
+                {
+                    text: "编写自动化测试",
+                    children: [
+                        "ch11-00-testing",
+                        "ch11-01-writing-tests",
+                        "ch11-02-running-tests",
+                        "ch11-03-test-organization",
+                    ],
+                },
+                {
+                    text: "一个 I/O 项目：构建一个命令行程序",
+                    children: [
+                        "ch12-00-an-io-project",
+                        "ch12-01-accepting-command-line-arguments",
+                        "ch12-02-reading-a-file",
+                        "ch12-03-improving-error-handling-and-modularity",
+                        "ch12-04-testing-the-librarys-functionality",
+                        "ch12-05-working-with-environment-variables",
+                        "ch12-06-writing-to-stderr-instead-of-stdout",
+                    ],
+                },
+                {
+                    text: "Rust 中的函数式语言功能：迭代器与闭包",
+                    children: [
+                        "ch13-00-functional-features",
+                        "ch13-01-closures",
+                        "ch13-02-iterators",
+                        "ch13-03-improving-our-io-project",
+                        "ch13-04-performance",
+                    ],
+                },
+                {
+                    text: "进一步认识 Cargo 和 Crates.io",
+                    children: [
+                        "ch14-00-more-about-cargo",
+                        "ch14-01-release-profiles",
+                        "ch14-02-publishing-to-crates-io",
+                        "ch14-03-cargo-workspaces",
+                        "ch14-04-installing-binaries",
+                        "ch14-05-extending-cargo",
+                    ],
+                },
+                {
+                    text: "智能指针",
+                    children: [
+                        "ch15-00-smart-pointers",
+                        "ch15-01-box",
+                        "ch15-02-deref",
+                        "ch15-03-drop",
+                        "ch15-04-rc",
+                        "ch15-05-interior-mutability",
+                        "ch15-06-reference-cycles",
+                    ],
+                },
+                {
+                    text: "无畏并发",
+                    children: [
+                        "ch16-00-concurrency",
+                        "ch16-01-threads",
+                        "ch16-02-message-passing",
+                        "ch16-03-shared-state",
+                        "ch16-04-extensible-concurrency-sync-and-send",
+                    ],
+                },
+                {
+                    text: "Rust 的面向对象特性",
+                    children: [
+                        "ch17-00-oop",
+                        "ch17-01-what-is-oo",
+                        "ch17-02-trait-objects",
+                        "ch17-03-oo-design-patterns",
+                    ],
+                },
+                {
+                    text: "模式与模式匹配",
+                    children: [
+                        "ch18-00-patterns",
+                        "ch18-01-all-the-places-for-patterns",
+                        "ch18-02-refutability",
+                        "ch18-03-pattern-syntax",
+                    ],
+                },
+                {
+                    text: "高级特征",
+                    children: [
+                        "ch19-00-advanced-features",
+                        "ch19-01-unsafe-rust",
+                        "ch19-03-advanced-traits",
+                        "ch19-04-advanced-types",
+                        "ch19-05-advanced-functions-and-closures",
+                        "ch19-06-macros",
+                    ],
+                },
+                {
+                    text: "最后的项目：构建多线程 web server",
+                    children: [
+                        "ch20-00-final-project-a-web-server",
+                        "ch20-01-single-threaded",
+                        "ch20-02-multithreaded",
+                        "ch20-03-graceful-shutdown-and-cleanup",
+                    ],
+                },
+                {
+                    text: "附录",
+                    children: [
+                        "appendix-00",
+                        "appendix-01-keywords",
+                        "appendix-02-operators",
+                        "appendix-03-derivable-traits",
+                        "appendix-04-useful-development-tools",
+                        "appendix-05-editions",
+                        "appendix-06-translation",
+                        "appendix-07-nightly-rust",
+                    ],
+                },
+            ]
         },
         navbar: [
             { text: "首页", link: "/" },
