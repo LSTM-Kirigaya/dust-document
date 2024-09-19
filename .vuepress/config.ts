@@ -517,7 +517,7 @@ export default defineUserConfig({
             ],
             "/blogs/live2d-render/main.html": [
                 {
-                    text: "目录",
+                    text: "安装",
                     children: [
                         "/docs/live2d-render/static-html",
                         "/docs/live2d-render/vue-install",
@@ -525,14 +525,19 @@ export default defineUserConfig({
                         "/docs/live2d-render/hexo-install",
                         "/docs/live2d-render/hugo-install",
                         "/docs/live2d-render/vuepress-install",
+                    ]
+                },
+                {
+                    text: "基本使用",
+                    children: [
                         "/docs/live2d-render/major-function",
                         "/docs/live2d-render/optimize",
-                    ],
-                },
+                    ]
+                }
             ],
             "/docs/live2d-render/": [
                 {
-                    text: "目录",
+                    text: "安装",
                     children: [
                         "static-html",
                         "vue-install",
@@ -540,10 +545,15 @@ export default defineUserConfig({
                         "hexo-install",
                         "hugo-install",
                         "vuepress-install",
+                    ]
+                },
+                {
+                    text: "基本使用",
+                    children: [
                         "major-function",
                         "optimize",
-                    ],
-                },
+                    ]
+                }
             ],
             "/blogs/rust-tutorial/main.html": [
                 {
