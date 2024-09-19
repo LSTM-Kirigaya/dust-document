@@ -520,7 +520,8 @@ export default defineUserConfig({
                     text: "目录",
                     children: [
                         "/docs/live2d-render/static-html",
-                        "/docs/live2d-render/spa-install",
+                        "/docs/live2d-render/vue-install",
+                        "/docs/live2d-render/react-install",
                         "/docs/live2d-render/hexo-install",
                         "/docs/live2d-render/hugo-install",
                         "/docs/live2d-render/vuepress-install",
@@ -534,7 +535,8 @@ export default defineUserConfig({
                     text: "目录",
                     children: [
                         "static-html",
-                        "spa-install",
+                        "vue-install",
+                        "react-install",
                         "hexo-install",
                         "hugo-install",
                         "vuepress-install",

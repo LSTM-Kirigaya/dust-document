@@ -4,14 +4,14 @@
             @click="click()"
         >
             <div class="cover">
-                <img :src="blockLogo" class="display-image">
+                <img :src="blockLogo">
             </div>
             <div class="main">
                 <div class="title">
                     {{ blockTitle }}
                 </div>
                 <div class="desc">
-                    <span>{{ props.desc }}</span>
+                    <span>{{ blockDesc }}</span>
                 </div>
             </div>
         </div>
@@ -38,7 +38,7 @@ const props = defineProps({
     },
     desc: {
         type: String,
-        required: true
+        required: false
     },
     title: {
         type: String,
@@ -70,7 +70,17 @@ const blockLogo = computed(() => {
             return props.logo;
         }
     }
-})
+});
+
+
+const blockDesc = computed(() => {
+    if (props.desc) {
+        return props.desc;
+    } else {
+        return props.href;
+    }
+});
+
 
 function click() {
     window.open(props.href, '_blank');
@@ -134,8 +144,7 @@ function click() {
     font-size: 0.9rem;
 }
 
-
-.display-image {
+.detail-url-container .cover img {
     position: absolute;
     top: 50%;
     height: 100%;

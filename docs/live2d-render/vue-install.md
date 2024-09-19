@@ -1,5 +1,5 @@
 ---
-title: vue/react 项目下的安装
+title: vue 项目下的安装
 ---
 
 ## 安装
@@ -42,7 +42,7 @@ yarn add live2d-render
 
 ## 使用 live2d-render 展示 live2d
 
-此处以 vue 项目为例，通过如下代码初始化 live2d
+vue 项目中，通过如下代码初始化 live2d
 
 ```javascript
 <script setup>
