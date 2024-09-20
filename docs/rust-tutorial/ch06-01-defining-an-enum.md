@@ -1,5 +1,5 @@
 ---
-title: 枚举的定义
+title: 7.2 枚举的定义
 ---
 
 > [ch06-01-defining-an-enum.md](https://github.com/rust-lang/book/blob/main/src/ch06-01-defining-an-enum.md)

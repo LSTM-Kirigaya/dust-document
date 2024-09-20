@@ -1,5 +1,5 @@
 ---
-title: Trait：定义共同行为
+title: 11.3 Trait：定义共同行为
 ---
 
 > [ch10-02-traits.md](https://github.com/rust-lang/book/blob/main/src/ch10-02-traits.md)

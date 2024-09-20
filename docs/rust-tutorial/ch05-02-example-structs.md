@@ -1,5 +1,5 @@
 ---
-title: 结构体示例程序
+title: 6.3 结构体示例程序
 ---
 
 > [ch05-02-example-structs.md](https://github.com/rust-lang/book/blob/main/src/ch05-02-example-structs.md)

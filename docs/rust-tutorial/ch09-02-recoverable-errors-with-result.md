@@ -1,5 +1,5 @@
 ---
-title: 用 Result 处理可恢复的错误
+title: 10.3 用 Result 处理可恢复的错误
 ---
 
 > [ch09-02-recoverable-errors-with-result.md](https://github.com/rust-lang/book/blob/main/src/ch09-02-recoverable-errors-with-result.md)

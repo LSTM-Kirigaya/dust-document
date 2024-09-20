@@ -1,5 +1,5 @@
 ---
-title: 变量和可变性
+title: 4.2 变量和可变性
 ---
 
 > [ch03-01-variables-and-mutability.md](https://github.com/rust-lang/book/blob/main/src/ch03-01-variables-and-mutability.md)

@@ -1,5 +1,5 @@
 ---
-title: 重构改进模块性和错误处理
+title: 13.4 重构改进模块性和错误处理
 ---
 
 > [ch12-03-improving-error-handling-and-modularity.md](https://github.com/rust-lang/book/blob/main/src/ch12-03-improving-error-handling-and-modularity.md)
@@ -367,6 +367,22 @@ Rust 提示我们的代码忽略了 `Result` 值，它可能表明这里存在�
 <span class="filename">文件名：src/lib.rs</span>
 
 ```rust
+use std::error::Error;
+use std::fs;
+
+pub struct Config {
+    pub query: String,
+    pub file_path: String,
+}
+
+impl Config {
+    pub fn build(args: &[String]) -> Result<Config, &'static str> {
+        // --snip--
+    }
+}
+
+pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
+    // --snip--
 }
 ```
 

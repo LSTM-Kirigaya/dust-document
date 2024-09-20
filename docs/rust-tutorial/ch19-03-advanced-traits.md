@@ -1,5 +1,5 @@
 ---
-title: 高级 trait
+title: 20.4 高级 trait
 ---
 
 > [ch19-03-advanced-traits.md](https://github.com/rust-lang/book/blob/main/src/ch19-03-advanced-traits.md)

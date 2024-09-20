@@ -1,5 +1,5 @@
 ---
-title: Rust 中的函数式语言功能：迭代器与闭包
+title: 14.1 Rust 中的函数式语言功能：迭代器与闭包
 ---
 
 > [ch13-00-functional-features.md](https://github.com/rust-lang/book/blob/main/src/ch13-00-functional-features.md)

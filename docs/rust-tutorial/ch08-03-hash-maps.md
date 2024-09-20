@@ -1,5 +1,5 @@
 ---
-title: 使用 Hash Map 储存键值对
+title: 9.4 使用 Hash Map 储存键值对
 ---
 
 > [ch08-03-hash-maps.md](https://github.com/rust-lang/book/blob/main/src/ch08-03-hash-maps.md)

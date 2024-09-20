@@ -1,5 +1,5 @@
 ---
-title: 通过 Deref trait 将智能指针当作常规引用处理
+title: 16.3 通过 Deref trait 将智能指针当作常规引用处理
 ---
 
 > [ch15-02-deref.md](https://github.com/rust-lang/book/blob/main/src/ch15-02-deref.md)

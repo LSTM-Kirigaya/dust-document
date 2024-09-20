@@ -1,5 +1,5 @@
 ---
-title: Rust 的面向对象特性
+title: 18.1 Rust 的面向对象特性
 ---
 
 > [ch17-00-oop.md](https://github.com/rust-lang/book/blob/main/src/ch17-00-oop.md)

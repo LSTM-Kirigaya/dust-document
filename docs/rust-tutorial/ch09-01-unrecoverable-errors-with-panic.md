@@ -1,5 +1,5 @@
 ---
-title: 用 panic! 处理不可恢复的错误
+title: 10.2 用 panic! 处理不可恢复的错误
 ---
 
 > [ch09-01-unrecoverable-errors-with-panic.md](https://github.com/rust-lang/book/blob/main/src/ch09-01-unrecoverable-errors-with-panic.md)

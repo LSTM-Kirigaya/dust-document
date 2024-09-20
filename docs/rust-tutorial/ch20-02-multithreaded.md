@@ -1,5 +1,5 @@
 ---
-title: 将单线程 server 变为多线程 server
+title: 21.3 将单线程 server 变为多线程 server
 ---
 
 > [ch20-02-multithreaded.md](https://github.com/rust-lang/book/blob/main/src/ch20-02-multithreaded.md)
@@ -15,6 +15,28 @@ title: 将单线程 server 变为多线程 server
 <span class="filename">文件名：src/main.rs</span>
 
 ```rust
+use std::{
+    fs,
+    io::{prelude::*, BufReader},
+    net::{TcpListener, TcpStream},
+    thread,
+    time::Duration,
+};
+// --snip--
+
+fn handle_connection(mut stream: TcpStream) {
+    // --snip--
+
+    let (status_line, filename) = match &request_line[..] {
+        "GET / HTTP/1.1" => ("HTTP/1.1 200 OK", "hello.html"),
+        "GET /sleep HTTP/1.1" => {
+            thread::sleep(Duration::from_secs(5));
+            ("HTTP/1.1 200 OK", "hello.html")
+        }
+        _ => ("HTTP/1.1 404 NOT FOUND", "404.html"),
+    };
+
+    // --snip--
 }
 ```
 
@@ -223,6 +245,21 @@ $ cargo check
 <span class="filename">文件名：src/lib.rs</span>
 
 ```rust
+impl ThreadPool {
+    /// 创建线程池。
+    ///
+    /// 线程池中线程的数量。
+    ///
+    /// # Panics
+    ///
+    /// `new` 函数在 size 为 0 时会 panic。
+    pub fn new(size: usize) -> ThreadPool {
+        assert!(size > 0);
+
+        ThreadPool
+    }
+
+    // --snip--
 }
 ```
 
@@ -255,6 +292,26 @@ pub fn spawn<F, T>(f: F) -> JoinHandle<T>
 <span class="filename">文件名：src/lib.rs</span>
 
 ```rust
+use std::thread;
+
+pub struct ThreadPool {
+    threads: Vec<thread::JoinHandle<()>>,
+}
+
+impl ThreadPool {
+    // --snip--
+    pub fn new(size: usize) -> ThreadPool {
+        assert!(size > 0);
+
+        let mut threads = Vec::with_capacity(size);
+
+        for _ in 0..size {
+            // create some threads and store them in the vector
+        }
+
+        ThreadPool { threads }
+    }
+    // --snip--
 }
 ```
 
@@ -333,7 +390,33 @@ impl Worker {
 <span class="filename">文件名：src/lib.rs</span>
 
 ```rust
+use std::{sync::mpsc, thread};
+
+pub struct ThreadPool {
+    workers: Vec<Worker>,
+    sender: mpsc::Sender<Job>,
 }
+
+struct Job;
+
+impl ThreadPool {
+    // --snip--
+    pub fn new(size: usize) -> ThreadPool {
+        assert!(size > 0);
+
+        let (sender, receiver) = mpsc::channel();
+
+        let mut workers = Vec::with_capacity(size);
+
+        for id in 0..size {
+            workers.push(Worker::new(id));
+        }
+
+        ThreadPool { workers, sender }
+    }
+    // --snip--
+}
+
 ```
 
 <span class="caption">示例 20-16: 修改 `ThreadPool` 来储存一个传输 `Job` 实例的发送者</span>

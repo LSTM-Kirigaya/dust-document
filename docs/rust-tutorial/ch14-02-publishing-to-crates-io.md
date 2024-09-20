@@ -1,5 +1,5 @@
 ---
-title: 将 crate 发布到 Crates.io
+title: 15.3 将 crate 发布到 Crates.io
 ---
 
 > [ch14-02-publishing-to-crates-io.md](https://github.com/rust-lang/book/blob/main/src/ch14-02-publishing-to-crates-io.md) <br>
@@ -149,6 +149,20 @@ fn main() {
 <span class="filename">文件名：src/lib.rs</span>
 
 ```rust
+//! # Art
+//!
+//! A library for modeling artistic concepts.
+
+pub use self::kinds::PrimaryColor;
+pub use self::kinds::SecondaryColor;
+pub use self::utils::mix;
+
+pub mod kinds {
+    // --snip--
+}
+
+pub mod utils {
+    // --snip--
 }
 ```
 
@@ -165,6 +179,11 @@ fn main() {
 <span class="filename">文件名：src/main.rs</span>
 
 ```rust
+use art::mix;
+use art::PrimaryColor;
+
+fn main() {
+    // --snip--
 }
 ```
 

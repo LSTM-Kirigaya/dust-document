@@ -1,5 +1,5 @@
 ---
-title: 安装
+title: 2.2 安装
 ---
 
 > [ch01-01-installation.md](https://github.com/rust-lang/book/blob/main/src/ch01-01-installation.md) <br>

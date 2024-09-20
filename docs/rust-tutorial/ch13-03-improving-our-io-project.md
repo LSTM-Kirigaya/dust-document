@@ -1,5 +1,5 @@
 ---
-title: 改进 I/O 项目
+title: 14.4 改进 I/O 项目
 ---
 
 > [ch13-03-improving-our-io-project.md](https://github.com/rust-lang/book/blob/main/src/ch13-03-improving-our-io-project.md)
@@ -52,6 +52,15 @@ impl Config {
 <span class="filename">文件名：src/main.rs</span>
 
 ```rust
+fn main() {
+    let args: Vec<String> = env::args().collect();
+
+    let config = Config::build(&args).unwrap_or_else(|err| {
+        eprintln!("Problem parsing arguments: {err}");
+        process::exit(1);
+    });
+
+    // --snip--
 }
 ```
 
@@ -60,6 +69,13 @@ impl Config {
 <span class="filename">文件名：src/main.rs</span>
 
 ```rust
+fn main() {
+    let config = Config::build(env::args()).unwrap_or_else(|err| {
+        eprintln!("Problem parsing arguments: {err}");
+        process::exit(1);
+    });
+
+    // --snip--
 }
 ```
 

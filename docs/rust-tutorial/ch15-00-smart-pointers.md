@@ -1,5 +1,5 @@
 ---
-title: 智能指针
+title: 16.1 智能指针
 ---
 
 > [ch15-00-smart-pointers.md](https://github.com/rust-lang/book/blob/main/src/ch15-00-smart-pointers.md)

@@ -1,5 +1,5 @@
 ---
-title: Cargo 工作空间
+title: 15.4 Cargo 工作空间
 ---
 
 > [ch14-03-cargo-workspaces.md](https://github.com/rust-lang/book/blob/main/src/ch14-03-cargo-workspaces.md)

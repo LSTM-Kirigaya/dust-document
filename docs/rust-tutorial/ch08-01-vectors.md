@@ -1,5 +1,5 @@
 ---
-title: 使用 Vector 储存列表
+title: 9.2 使用 Vector 储存列表
 ---
 
 > [ch08-01-vectors.md](https://github.com/rust-lang/book/blob/main/src/ch08-01-vectors.md)

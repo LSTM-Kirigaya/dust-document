@@ -1,5 +1,5 @@
 ---
-title: 共享状态的并发
+title: 17.4 共享状态的并发
 ---
 
 > [ch16-03-shared-state.md](https://github.com/rust-lang/book/blob/main/src/ch16-03-shared-state.md)

@@ -1,5 +1,5 @@
 ---
-title: 使用消息传递在线程间传送数据
+title: 17.3 使用消息传递在线程间传送数据
 ---
 
 > [ch16-02-message-passing.md](https://github.com/rust-lang/book/blob/main/src/ch16-02-message-passing.md)

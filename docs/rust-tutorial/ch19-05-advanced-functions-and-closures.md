@@ -1,5 +1,5 @@
 ---
-title: 高级函数与闭包
+title: 20.6 高级函数与闭包
 ---
 
 > [ch19-05-advanced-functions-and-closures.md](https://github.com/rust-lang/book/blob/main/src/ch19-05-advanced-functions-and-closures.md)

@@ -1,5 +1,5 @@
 ---
-title: 接受命令行参数
+title: 13.2 接受命令行参数
 ---
 
 > [ch12-01-accepting-command-line-arguments.md](https://github.com/rust-lang/book/blob/main/src/ch12-01-accepting-command-line-arguments.md)

@@ -1,5 +1,5 @@
 ---
-title: Hello, World!
+title: 2.3 Hello, World!
 ---
 
 > [ch01-02-hello-world.md](https://github.com/rust-lang/book/blob/main/src/ch01-02-hello-world.md)

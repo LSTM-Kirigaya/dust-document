@@ -1,5 +1,5 @@
 ---
-title: 使用Box<T>指向堆上的数据
+title: 16.2 使用Box<T>指向堆上的数据
 ---
 
 > [ch15-01-box.md](https://github.com/rust-lang/book/blob/main/src/ch15-01-box.md)

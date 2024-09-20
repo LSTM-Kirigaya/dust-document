@@ -1,5 +1,5 @@
 ---
-title: 使用线程同时运行代码
+title: 17.2 使用线程同时运行代码
 ---
 
 > [ch16-01-threads.md](https://github.com/rust-lang/book/blob/main/src/ch16-01-threads.md)

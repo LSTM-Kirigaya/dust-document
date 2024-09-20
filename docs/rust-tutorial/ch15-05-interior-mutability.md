@@ -1,5 +1,5 @@
 ---
-title: RefCell<T> 和内部可变性模式
+title: 16.6 RefCell<T> 和内部可变性模式
 ---
 
 > [ch15-05-interior-mutability.md](https://github.com/rust-lang/book/blob/main/src/ch15-05-interior-mutability.md)

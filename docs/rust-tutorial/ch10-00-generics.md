@@ -1,5 +1,5 @@
 ---
-title: 泛型、Trait 和生命周期
+title: 11.1 泛型、Trait 和生命周期
 ---
 
 > [ch10-00-generics.md](https://github.com/rust-lang/book/blob/main/src/ch10-00-generics.md)
@@ -25,6 +25,18 @@ title: 泛型、Trait 和生命周期
 <span class="filename">文件名：src/main.rs</span>
 
 ```rust
+fn main() {
+    let number_list = vec![34, 50, 25, 100, 65];
+
+    let mut largest = &number_list[0];
+
+    for number in &number_list {
+        if number > largest {
+            largest = number;
+        }
+    }
+
+    println!("The largest number is {largest}");
 }
 ```
 
@@ -75,6 +87,28 @@ fn main() {
 <span class="filename">文件名：src/main.rs</span>
 
 ```rust
+fn largest(list: &[i32]) -> &i32 {
+    let mut largest = &list[0];
+
+    for item in list {
+        if item > largest {
+            largest = item;
+        }
+    }
+
+    largest
+}
+
+fn main() {
+    let number_list = vec![34, 50, 25, 100, 65];
+
+    let result = largest(&number_list);
+    println!("The largest number is {result}");
+
+    let number_list = vec![102, 34, 6000, 89, 54, 2, 43, 8];
+
+    let result = largest(&number_list);
+    println!("The largest number is {result}");
 }
 ```
 

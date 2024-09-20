@@ -1,5 +1,5 @@
 ---
-title: 采用发布配置自定义构建
+title: 15.2 采用发布配置自定义构建
 ---
 
 > [ch14-01-release-profiles.md](https://github.com/rust-lang/book/blob/main/src/ch14-01-release-profiles.md)

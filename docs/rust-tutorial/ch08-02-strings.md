@@ -1,5 +1,5 @@
 ---
-title: 使用字符串储存 UTF-8 编码的文本
+title: 9.3 使用字符串储存 UTF-8 编码的文本
 ---
 
 > [ch08-02-strings.md](https://github.com/rust-lang/book/blob/main/src/ch08-02-strings.md)
@@ -63,12 +63,8 @@ title: 使用字符串储存 UTF-8 编码的文本
     let hello = String::from("안녕하세요");
     let hello = String::from("你好");
     let hello = String::from("Olá");
-    // ANCHOR: russian
     let hello = String::from("Здравствуйте");
-    // ANCHOR_END: russian
-    // ANCHOR: spanish
     let hello = String::from("Hola");
-    // ANCHOR_END: spanish
 ```
 
 <span class="caption">示例 8-14：在字符串中储存不同语言的问候语</span>

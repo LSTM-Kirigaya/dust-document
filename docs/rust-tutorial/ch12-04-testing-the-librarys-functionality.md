@@ -1,5 +1,5 @@
 ---
-title: 采用测试驱动开发完善库的功能
+title: 13.5 采用测试驱动开发完善库的功能
 ---
 
 > [ch12-04-testing-the-librarys-functionality.md](https://github.com/rust-lang/book/blob/main/src/ch12-04-testing-the-librarys-functionality.md)
@@ -174,7 +174,6 @@ pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
 <span class="filename">文件名：src/lib.rs</span>
 
 ```rust
-// ANCHOR: ch13
 pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
     let mut results = Vec::new();
 
@@ -186,7 +185,6 @@ pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
 
     results
 }
-// ANCHOR_END: ch13
 ```
 
 <span class="caption">示例 12-19：储存匹配的行以便可以返回它们</span>

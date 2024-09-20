@@ -1,5 +1,5 @@
 ---
-title: 高级类型
+title: 20.5 高级类型
 ---
 
 > [ch19-04-advanced-types.md](https://github.com/rust-lang/book/blob/main/src/ch19-04-advanced-types.md)
@@ -29,9 +29,7 @@ Rust 提供了声明 **类型别名**（*type alias*）的能力，使用 `type`
 这意味着 `Kilometers` 是 `i32` 的 **同义词**（*synonym*）；不同于示例 19-15 中创建的 `Millimeters` 和 `Meters` 类型。`Kilometers` 不是一个新的、单独的类型。`Kilometers` 类型的值将被完全当作 `i32` 类型值来对待：
 
 ```rust
-    // ANCHOR: here
     type Kilometers = i32;
-    // ANCHOR_END: here
 
     let x: i32 = 5;
     let y: Kilometers = 5;
@@ -105,6 +103,8 @@ pub trait Write {
 Rust 有一个叫做 `!` 的特殊类型。在类型理论术语中，它被称为 *empty type*，因为它没有值。我们更倾向于称之为 *never type*。这个名字描述了它的作用：在函数从不返回的时候充当返回值。例如：
 
 ```rust
+fn bar() -> ! {
+    panic!();
 }
 ```
 

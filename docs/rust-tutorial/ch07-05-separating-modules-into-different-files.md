@@ -1,5 +1,5 @@
 ---
-title: 将模块拆分成多个文件
+title: 8.6 将模块拆分成多个文件
 ---
 
 > [ch07-05-separating-modules-into-different-files.md](https://github.com/rust-lang/book/blob/main/src/ch07-05-separating-modules-into-different-files.md)

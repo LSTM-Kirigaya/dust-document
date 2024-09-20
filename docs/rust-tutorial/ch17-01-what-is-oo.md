@@ -1,5 +1,5 @@
 ---
-title: 面向对象语言的特征
+title: 18.2 面向对象语言的特征
 ---
 
 > [ch17-01-what-is-oo.md](https://github.com/rust-lang/book/blob/main/src/ch17-01-what-is-oo.md)

@@ -1,5 +1,5 @@
 ---
-title: 读取文件
+title: 13.3 读取文件
 ---
 
 > [ch12-02-reading-a-file.md](https://github.com/rust-lang/book/blob/main/src/ch12-02-reading-a-file.md)

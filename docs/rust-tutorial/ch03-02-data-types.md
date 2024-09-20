@@ -1,5 +1,5 @@
 ---
-title: 数据类型
+title: 4.3 数据类型
 ---
 
 > [ch03-02-data-types.md](https://github.com/rust-lang/book/blob/main/src/ch03-02-data-types.md)

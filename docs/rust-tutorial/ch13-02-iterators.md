@@ -1,5 +1,5 @@
 ---
-title: 使用迭代器处理元素序列
+title: 14.3 使用迭代器处理元素序列
 ---
 
 > [ch13-02-iterators.md](https://github.com/rust-lang/book/blob/main/src/ch13-02-iterators.md)

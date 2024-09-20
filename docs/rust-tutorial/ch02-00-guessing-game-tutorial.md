@@ -1,5 +1,5 @@
 ---
-title: 写个猜数字游戏
+title: 3.1 写个猜数字游戏
 ---
 
 > [ch02-00-guessing-game-tutorial.md](https://github.com/rust-lang/book/blob/main/src/ch02-00-guessing-game-tutorial.md)
@@ -603,12 +603,10 @@ note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
             .read_line(&mut guess)
             .expect("Failed to read line");
 
-        // ANCHOR: ch19
         let guess: u32 = match guess.trim().parse() {
             Ok(num) => num,
             Err(_) => continue,
         };
-        // ANCHOR_END: ch19
 
         println!("You guessed: {guess}");
 

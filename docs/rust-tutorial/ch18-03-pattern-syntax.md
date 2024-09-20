@@ -1,5 +1,5 @@
 ---
-title: 所有的模式语法
+title: 19.4 所有的模式语法
 ---
 
 > [ch18-03-pattern-syntax.md](https://github.com/rust-lang/book/blob/main/src/ch18-03-pattern-syntax.md)

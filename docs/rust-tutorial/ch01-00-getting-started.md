@@ -1,5 +1,5 @@
 ---
-title: 入门指南
+title: 2.1 入门指南
 ---
 
 > [ch01-00-getting-started.md](https://github.com/rust-lang/book/blob/main/src/ch01-00-getting-started.md)

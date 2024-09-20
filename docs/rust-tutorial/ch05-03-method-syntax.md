@@ -1,5 +1,5 @@
 ---
-title: 方法语法
+title: 6.4 方法语法
 ---
 
 > [ch05-03-method-syntax.md](https://github.com/rust-lang/book/blob/main/src/ch05-03-method-syntax.md)

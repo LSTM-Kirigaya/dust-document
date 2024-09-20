@@ -1,5 +1,5 @@
 ---
-title: 错误处理
+title: 10.1 错误处理
 ---
 
 > [ch09-00-error-handling.md](https://github.com/rust-lang/book/blob/main/src/ch09-00-error-handling.md)

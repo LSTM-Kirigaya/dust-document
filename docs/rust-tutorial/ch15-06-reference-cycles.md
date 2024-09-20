@@ -1,5 +1,5 @@
 ---
-title: 引用循环与内存泄漏
+title: 16.7 引用循环与内存泄漏
 ---
 
 > [ch15-06-reference-cycles.md](https://github.com/rust-lang/book/blob/main/src/ch15-06-reference-cycles.md)

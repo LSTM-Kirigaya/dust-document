@@ -1,5 +1,5 @@
 ---
-title: 包和 Crate
+title: 8.2 包和 Crate
 ---
 
 > [ch07-01-packages-and-crates.md](https://github.com/rust-lang/book/blob/main/src/ch07-01-packages-and-crates.md)

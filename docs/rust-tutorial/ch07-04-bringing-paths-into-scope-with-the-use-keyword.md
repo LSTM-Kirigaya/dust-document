@@ -1,5 +1,5 @@
 ---
-title: 使用 use 关键字将路径引入作用域
+title: 8.5 使用 use 关键字将路径引入作用域
 ---
 
 > [ch07-04-bringing-paths-into-scope-with-the-use-keyword.md](https://github.com/rust-lang/book/blob/main/src/ch07-04-bringing-paths-into-scope-with-the-use-keyword.md)
@@ -129,6 +129,17 @@ fn main() {
 <span class="filename">文件名：src/lib.rs</span>
 
 ```rust
+use std::fmt;
+use std::io;
+
+fn function1() -> fmt::Result {
+    // --snip--
+    Ok(())
+}
+
+fn function2() -> io::Result<()> {
+    // --snip--
+    Ok(())
 }
 ```
 
@@ -143,6 +154,17 @@ fn main() {
 <span class="filename">文件名：src/lib.rs</span>
 
 ```rust
+use std::fmt::Result;
+use std::io::Result as IoResult;
+
+fn function1() -> Result {
+    // --snip--
+    Ok(())
+}
+
+fn function2() -> IoResult<()> {
+    // --snip--
+    Ok(())
 }
 ```
 
@@ -193,6 +215,10 @@ rand = "0.8.5"
 接着，为了将 `rand` 定义引入项目包的作用域，我们加入一行 `use` 起始的包名，它以 `rand` 包名开头并列出了需要引入作用域的项。回忆一下第二章的 “生成一个随机数” 部分，我们曾将 `Rng` trait 引入作用域并调用了 `rand::thread_rng` 函数：
 
 ```rust
+use rand::Rng;
+
+fn main() {
+    let secret_number = rand::thread_rng().gen_range(1..=100);
 }
 ```
 

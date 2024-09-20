@@ -1,5 +1,5 @@
 ---
-title: 闭包：可以捕获环境的匿名函数
+title: 14.2 闭包：可以捕获环境的匿名函数
 ---
 
 > [ch13-01-closures.md](https://github.com/rust-lang/book/blob/main/src/ch13-01-closures.md)

@@ -1,5 +1,5 @@
 ---
-title: match 控制流结构
+title: 7.3 match 控制流结构
 ---
 
 > [ch06-02-match.md](https://github.com/rust-lang/book/blob/main/src/ch06-02-match.md)
@@ -111,12 +111,8 @@ fn value_in_cents(coin: Coin) -> u8 {
 ```rust
     fn plus_one(x: Option<i32>) -> Option<i32> {
         match x {
-            // ANCHOR: first_arm
             None => None,
-            // ANCHOR_END: first_arm
-            // ANCHOR: second_arm
             Some(i) => Some(i + 1),
-            // ANCHOR_END: second_arm
         }
     }
 

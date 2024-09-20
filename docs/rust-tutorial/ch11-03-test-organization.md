@@ -1,5 +1,5 @@
 ---
-title: 测试的组织结构
+title: 12.4 测试的组织结构
 ---
 
 > [ch11-03-test-organization.md](https://github.com/rust-lang/book/blob/main/src/ch11-03-test-organization.md)

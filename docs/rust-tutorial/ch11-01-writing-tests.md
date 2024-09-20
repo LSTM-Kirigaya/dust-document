@@ -1,5 +1,5 @@
 ---
-title: 如何编写测试
+title: 12.2 如何编写测试
 ---
 
 > [ch11-01-writing-tests.md](https://github.com/rust-lang/book/blob/main/src/ch11-01-writing-tests.md)
@@ -747,7 +747,6 @@ pub fn add(left: usize, right: usize) -> usize {
 mod tests {
     use super::*;
 
-    // ANCHOR: here
     #[test]
     fn it_works() -> Result<(), String> {
         let result = add(2, 2);
@@ -758,7 +757,6 @@ mod tests {
             Err(String::from("two plus two does not equal four"))
         }
     }
-    // ANCHOR_END: here
 }
 ```
 

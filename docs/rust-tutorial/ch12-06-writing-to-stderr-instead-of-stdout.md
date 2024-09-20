@@ -1,5 +1,5 @@
 ---
-title: 将错误信息输出到标准错误而不是标准输出
+title: 13.7 将错误信息输出到标准错误而不是标准输出
 ---
 
 > [ch12-06-writing-to-stderr-instead-of-stdout.md](https://github.com/rust-lang/book/blob/main/src/ch12-06-writing-to-stderr-instead-of-stdout.md)

@@ -1,5 +1,5 @@
 ---
-title: 使用 Sync 和 Send trait 的可扩展并发
+title: 17.5 使用 Sync 和 Send trait 的可扩展并发
 ---
 
 > [ch16-04-extensible-concurrency-sync-and-send.md](https://github.com/rust-lang/book/blob/main/src/ch16-04-extensible-concurrency-sync-and-send.md)

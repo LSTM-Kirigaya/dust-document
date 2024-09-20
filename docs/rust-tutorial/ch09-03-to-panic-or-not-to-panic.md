@@ -1,5 +1,5 @@
 ---
-title: 要不要 panic!
+title: 10.4 要不要 panic!
 ---
 
 > [ch09-03-to-panic-or-not-to-panic.md](https://github.com/rust-lang/book/blob/main/src/ch09-03-to-panic-or-not-to-panic.md)

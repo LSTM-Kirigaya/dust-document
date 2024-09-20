@@ -1,5 +1,5 @@
 ---
-title: 引用模块项目的路径
+title: 8.4 引用模块项目的路径
 ---
 
 > [ch07-03-paths-for-referring-to-an-item-in-the-module-tree.md](https://github.com/rust-lang/book/blob/main/src/ch07-03-paths-for-referring-to-an-item-in-the-module-tree.md)

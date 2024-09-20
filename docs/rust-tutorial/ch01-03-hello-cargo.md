@@ -1,5 +1,5 @@
 ---
-title: Hello, Cargo!
+title: 2.4 Hello, Cargo!
 ---
 
 > [ch01-03-hello-cargo.md](https://github.com/rust-lang/book/blob/main/src/ch01-03-hello-cargo.md)

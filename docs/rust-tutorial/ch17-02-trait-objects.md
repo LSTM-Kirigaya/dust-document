@@ -1,5 +1,5 @@
 ---
-title: 顾及不同类型值的 trait 对象
+title: 18.3 顾及不同类型值的 trait 对象
 ---
 
 > [ch17-02-trait-objects.md](https://github.com/rust-lang/book/blob/main/src/ch17-02-trait-objects.md)

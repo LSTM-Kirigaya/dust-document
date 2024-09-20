@@ -1,5 +1,5 @@
 ---
-title: 函数
+title: 4.4 函数
 ---
 
 > [ch03-03-how-functions-work.md](https://github.com/rust-lang/book/blob/main/src/ch03-03-how-functions-work.md)

@@ -1,5 +1,5 @@
 ---
-title: 面向对象设计模式的实现
+title: 18.4 面向对象设计模式的实现
 ---
 
 > [ch17-03-oo-design-patterns.md](https://github.com/rust-lang/book/blob/main/src/ch17-03-oo-design-patterns.md)
@@ -209,7 +209,14 @@ impl State for Published {
 <span class="filename">文件名：src/lib.rs</span>
 
 ```rust
+impl Post {
+    // --snip--
+    pub fn content(&self) -> &str {
+        self.state.as_ref().unwrap().content(self)
+    }
+    // --snip--
 }
+
 ```
 
 <span class="caption">示例 17-17: 更新 `Post` 的 `content` 方法来委托调用 `State` 的 `content` 方法</span>
@@ -274,6 +281,11 @@ impl State for Published {
 <span class="filename">文件名：src/main.rs</span>
 
 ```rust
+fn main() {
+    let mut post = Post::new();
+
+    post.add_text("I ate a salad for lunch today");
+    assert_eq!("", post.content());
 }
 ```
 
