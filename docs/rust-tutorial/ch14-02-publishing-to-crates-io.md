@@ -1,5 +1,5 @@
 ---
-title: 15.3 将 crate 发布到 Crates.io
+title: 14.2 将 crate 发布到 Crates.io
 ---
 
 :::info

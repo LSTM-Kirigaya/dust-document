@@ -1,5 +1,5 @@
 ---
-title: 10.2 用 panic! 处理不可恢复的错误
+title: 9.1 用 panic! 处理不可恢复的错误
 ---
 
 :::info

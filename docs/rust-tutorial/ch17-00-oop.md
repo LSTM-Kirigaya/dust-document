@@ -1,5 +1,5 @@
 ---
-title: 18.1 Rust 的面向对象特性
+title: 17.0 Rust 的面向对象特性
 ---
 
 :::info

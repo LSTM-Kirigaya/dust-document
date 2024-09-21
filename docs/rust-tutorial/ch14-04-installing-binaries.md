@@ -1,5 +1,5 @@
 ---
-title: 15.5 使用 cargo install 安装二进制文件
+title: 14.4 使用 cargo install 安装二进制文件
 ---
 
 :::info

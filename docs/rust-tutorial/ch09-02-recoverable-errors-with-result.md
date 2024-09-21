@@ -1,5 +1,5 @@
 ---
-title: 10.3 用 Result 处理可恢复的错误
+title: 9.2 用 Result 处理可恢复的错误
 ---
 
 :::info

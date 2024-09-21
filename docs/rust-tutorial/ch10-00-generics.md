@@ -1,5 +1,5 @@
 ---
-title: 11.1 泛型、Trait 和生命周期
+title: 10.0 泛型、Trait 和生命周期
 ---
 
 :::info

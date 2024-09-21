@@ -1,5 +1,5 @@
 ---
-title: 16.3 通过 Deref trait 将智能指针当作常规引用处理
+title: 15.2 通过 Deref trait 将智能指针当作常规引用处理
 ---
 
 :::info

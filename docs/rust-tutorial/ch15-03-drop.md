@@ -1,5 +1,5 @@
 ---
-title: 16.4 使用 Drop Trait 运行清理代码
+title: 15.3 使用 Drop Trait 运行清理代码
 ---
 
 :::info

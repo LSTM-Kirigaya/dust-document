@@ -1,5 +1,5 @@
 ---
-title: 20.4 高级 trait
+title: 19.3 高级 trait
 ---
 
 :::info

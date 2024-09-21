@@ -1,5 +1,5 @@
 ---
-title: 16.6 RefCell<T> 和内部可变性模式
+title: 15.5 RefCell<T> 和内部可变性模式
 ---
 
 :::info

@@ -1,5 +1,5 @@
 ---
-title: 11.3 Trait：定义共同行为
+title: 10.2 Trait：定义共同行为
 ---
 
 :::info

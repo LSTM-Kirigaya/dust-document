@@ -1,5 +1,5 @@
 ---
-title: 17.5 使用 Sync 和 Send trait 的可扩展并发
+title: 16.4 使用 Sync 和 Send trait 的可扩展并发
 ---
 
 :::info

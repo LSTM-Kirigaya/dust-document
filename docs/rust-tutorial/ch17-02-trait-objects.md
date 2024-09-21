@@ -1,5 +1,5 @@
 ---
-title: 18.3 顾及不同类型值的 trait 对象
+title: 17.2 顾及不同类型值的 trait 对象
 ---
 
 :::info
