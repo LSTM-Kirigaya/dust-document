@@ -2,9 +2,11 @@
 title: 12.2 如何编写测试
 ---
 
-> [ch11-01-writing-tests.md](https://github.com/rust-lang/book/blob/main/src/ch11-01-writing-tests.md)
-> <br>
-> commit 6e2fe7c0f085989cc498cec139e717e2af172cb7
+:::info
+[ch11-01-writing-tests.md](https://github.com/rust-lang/book/blob/main/src/ch11-01-writing-tests.md)
+<br>
+commit 6e2fe7c0f085989cc498cec139e717e2af172cb7
+:::
 
 Rust 中的测试函数是用来验证非测试代码是否是按照期望的方式运行的。测试函数体通常执行如下三种操作：
 

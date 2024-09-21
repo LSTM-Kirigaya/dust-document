@@ -2,11 +2,15 @@
 title: 1.1 简介
 ---
 
-> [ch00-00-introduction.md](https://github.com/rust-lang/book/blob/main/src/ch00-00-introduction.md)
-> <br>
-> commit 4404cbcc354fad516c7ad9b5dea51b2ed876803a
+:::info
+[ch00-00-introduction.md](https://github.com/rust-lang/book/blob/main/src/ch00-00-introduction.md)
+<br>
+commit 4404cbcc354fad516c7ad9b5dea51b2ed876803a
+:::
 
-> 注意：此书的英文原版与 [No Starch Press][nsp] 出版的《[The Rust Programming Language][nsprust]》纸质版和电子版一致。
+:::info
+注意：此书的英文原版与 [No Starch Press][nsp] 出版的《[The Rust Programming Language][nsprust]》纸质版和电子版一致。
+:::
 
 [nsprust]: https://nostarch.com/rust-programming-language-2nd-edition
 [nsp]: https://nostarch.com/
@@ -96,6 +100,8 @@ Rust 适合那些渴望在编程语言中寻求速度与稳定性的开发者。
 
 [book]: https://github.com/rust-lang/book/tree/main/src
 
-> 译者注：此译本也有 [GitHub 仓库][trpl-zh-cn]，欢迎提交 Issue 和 PR :)
+:::info
+译者注：此译本也有 [GitHub 仓库][trpl-zh-cn]，欢迎提交 Issue 和 PR :)
+:::
 
 [trpl-zh-cn]: https://github.com/KaiserY/trpl-zh-cn

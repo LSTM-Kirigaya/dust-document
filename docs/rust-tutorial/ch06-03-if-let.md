@@ -2,9 +2,11 @@
 title: 7.4 if let 简洁控制流
 ---
 
-> [ch06-03-if-let.md](https://github.com/rust-lang/book/blob/main/src/ch06-03-if-let.md)
-> <br>
-> commit bb7e429ad6b59d9a0c37db7434976364cbb9c6da
+:::info
+[ch06-03-if-let.md](https://github.com/rust-lang/book/blob/main/src/ch06-03-if-let.md)
+<br>
+commit bb7e429ad6b59d9a0c37db7434976364cbb9c6da
+:::
 
 `if let` 语法让我们以一种不那么冗长的方式结合 `if` 和 `let`，来处理只匹配一个模式的值而忽略其他模式的情况。考虑示例 6-6 中的程序，它匹配一个 `config_max` 变量中的 `Option<u8>` 值并只希望当值为 `Some` 成员时执行代码：
 

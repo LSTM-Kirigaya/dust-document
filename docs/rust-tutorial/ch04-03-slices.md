@@ -2,9 +2,11 @@
 title: 5.4 Slice 类型
 ---
 
-> [ch04-03-slices.md](https://github.com/rust-lang/book/blob/main/src/ch04-03-slices.md)
-> <br>
-> commit 3d51f70c78162faaebcab0da0de2ddd333e7a8ed
+:::info
+[ch04-03-slices.md](https://github.com/rust-lang/book/blob/main/src/ch04-03-slices.md)
+<br>
+commit 3d51f70c78162faaebcab0da0de2ddd333e7a8ed
+:::
 
 *slice* 允许你引用集合中一段连续的元素序列，而不用引用整个集合。slice 是一种引用，所以它没有所有权。
 
@@ -148,7 +150,9 @@ let slice = &s[0..len];
 let slice = &s[..];
 ```
 
-> 注意：字符串 slice range 的索引必须位于有效的 UTF-8 字符边界内，如果尝试从一个多字节字符的中间位置创建字符串 slice，则程序将会因错误而退出。出于介绍字符串 slice 的目的，本部分假设只使用 ASCII 字符集；第八章的 [“使用字符串储存 UTF-8 编码的文本”][strings] 部分会更加全面的讨论 UTF-8 处理问题。
+:::info
+注意：字符串 slice range 的索引必须位于有效的 UTF-8 字符边界内，如果尝试从一个多字节字符的中间位置创建字符串 slice，则程序将会因错误而退出。出于介绍字符串 slice 的目的，本部分假设只使用 ASCII 字符集；第八章的 [“使用字符串储存 UTF-8 编码的文本”][strings] 部分会更加全面的讨论 UTF-8 处理问题。
+:::
 
 在记住所有这些知识后，让我们重写 `first_word` 来返回一个 slice。“字符串 slice” 的类型声明写作 `&str`：
 

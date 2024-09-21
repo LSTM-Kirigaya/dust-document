@@ -2,13 +2,17 @@
 title: 2.3 Hello, World!
 ---
 
-> [ch01-02-hello-world.md](https://github.com/rust-lang/book/blob/main/src/ch01-02-hello-world.md)
-> <br>
-> commit f801008f555e4e94aae826cf45f3a8011a773098
+:::info
+[ch01-02-hello-world.md](https://github.com/rust-lang/book/blob/main/src/ch01-02-hello-world.md)
+<br>
+commit f801008f555e4e94aae826cf45f3a8011a773098
+:::
 
 既然安装好了 Rust，是时候来编写第一个 Rust 程序了。当学习一门新语言的时候，使用该语言在屏幕上打印 `Hello, world!` 是一项传统，我们将沿用这一传统！
 
-> 注意：本书假设你熟悉基本的命令行操作。Rust 对于你的编辑器、工具，以及代码位于何处并没有特定的要求，如果你更倾向于使用集成开发环境（IDE），而不是命令行，请尽管使用你喜欢的 IDE。目前很多 IDE 都在一定程度上支持 Rust；查看 IDE 文档以了解更多细节。Rust 团队一直致力于借助 `rust-analyzer` 提供强大的 IDE 支持。详见[附录 D][devtools]<!-- ignore -->。
+:::info
+注意：本书假设你熟悉基本的命令行操作。Rust 对于你的编辑器、工具，以及代码位于何处并没有特定的要求，如果你更倾向于使用集成开发环境（IDE），而不是命令行，请尽管使用你喜欢的 IDE。目前很多 IDE 都在一定程度上支持 Rust；查看 IDE 文档以了解更多细节。Rust 团队一直致力于借助 `rust-analyzer` 提供强大的 IDE 支持。详见[附录 D][devtools]<!-- ignore -->。
+:::
 
 ### 创建项目目录
 
@@ -28,10 +32,12 @@ $ cd hello_world
 对于 Windows CMD，输入：
 
 ```doscon
-> mkdir "%USERPROFILE%\projects"
-> cd /d "%USERPROFILE%\projects"
-> mkdir hello_world
-> cd hello_world
+:::info
+mkdir "%USERPROFILE%\projects"
+cd /d "%USERPROFILE%\projects"
+mkdir hello_world
+cd hello_world
+:::
 ```
 
 ### 编写并运行 Rust 程序
@@ -61,8 +67,10 @@ Hello, world!
 在 Windows 上，输入命令 `.\main.exe`，而不是 `./main`：
 
 ```powershell
-> rustc main.rs
-> .\main.exe
+:::info
+rustc main.rs
+.\main.exe
+:::
 Hello, world!
 ```
 
@@ -84,7 +92,9 @@ fn main() {
 
 函数体被包裹在 `{}` 中。Rust 要求所有函数体都要用花括号包裹起来。一般来说，将左花括号与函数声明置于同一行并以空格分隔，是良好的代码风格。
 
-> 注：如果你希望在 Rust 项目中保持一种标准风格，可以使用名为 `rustfmt` 的自动格式化工具将代码格式化为特定的风格（更多内容详见[附录 D][devtools] 中的 `rustfmt`<!-- ignore -->）。Rust 团队已经在标准的 Rust 发行版中包含了这个工具，就像 `rustc` 一样。所以它应该已经安装在你的电脑中了！
+:::info
+注：如果你希望在 Rust 项目中保持一种标准风格，可以使用名为 `rustfmt` 的自动格式化工具将代码格式化为特定的风格（更多内容详见[附录 D][devtools] 中的 `rustfmt`<!-- ignore -->）。Rust 团队已经在标准的 Rust 发行版中包含了这个工具，就像 `rustc` 一样。所以它应该已经安装在你的电脑中了！
+:::
 
 在 `main` 函数中有如下代码：
 
@@ -122,7 +132,9 @@ main  main.rs
 在 Linux 和 macOS，你会看到两个文件。在 Windows PowerShell 中，你会看到同使用 CMD 相同的三个文件。在 Windows 的 CMD 上，则输入如下内容：
 
 ```doscon
-> dir /B %= the /B option says to only show the file names =%
+:::info
+dir /B %= the /B option says to only show the file names =%
+:::
 main.exe
 main.pdb
 main.rs

@@ -2,9 +2,11 @@
 title: 20.6 高级函数与闭包
 ---
 
-> [ch19-05-advanced-functions-and-closures.md](https://github.com/rust-lang/book/blob/main/src/ch19-05-advanced-functions-and-closures.md)
-> <br>
-> commit 21cf840842bdf768a798869f06373c96c1cc5122
+:::info
+[ch19-05-advanced-functions-and-closures.md](https://github.com/rust-lang/book/blob/main/src/ch19-05-advanced-functions-and-closures.md)
+<br>
+commit 21cf840842bdf768a798869f06373c96c1cc5122
+:::
 
 本部分将探索一些有关函数和闭包的高级功能，这包括函数指针以及返回值闭包。
 

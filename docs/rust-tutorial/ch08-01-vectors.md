@@ -2,9 +2,11 @@
 title: 9.2 使用 Vector 储存列表
 ---
 
-> [ch08-01-vectors.md](https://github.com/rust-lang/book/blob/main/src/ch08-01-vectors.md)
-> <br>
-> commit ac16184a7f56d17daa9c4c76901371085dc0ac43
+:::info
+[ch08-01-vectors.md](https://github.com/rust-lang/book/blob/main/src/ch08-01-vectors.md)
+<br>
+commit ac16184a7f56d17daa9c4c76901371085dc0ac43
+:::
 
 我们要讲到的第一个类型是 `Vec<T>`，也被称为 _vector_。vector 允许我们在一个单独的数据结构中储存多于一个的值，它在内存中彼此相邻地排列所有的值。vector 只能储存相同类型的值。它们在拥有一系列项的场景下非常实用，例如文件中的文本行或是购物车中商品的价格。
 
@@ -122,7 +124,9 @@ error: could not compile `collections` (bin "collections") due to 1 previous err
 
 示例 8-6 中的代码看起来应该能够运行：为什么第一个元素的引用会关心 vector 结尾的变化？不能这么做的原因是由于 vector 的工作方式：在 vector 的结尾增加新元素时，在没有足够空间将所有元素依次相邻存放的情况下，可能会要求分配新内存并将老的元素拷贝到新的空间中。这时，第一个元素的引用就指向了被释放的内存。借用规则阻止程序陷入这种状况。
 
-> 注意：关于 `Vec<T>` 类型的更多实现细节，请查看 [“The Rustonomicon”][nomicon]
+:::info
+注意：关于 `Vec<T>` 类型的更多实现细节，请查看 [“The Rustonomicon”][nomicon]
+:::
 
 ### 遍历 vector 中的元素
 

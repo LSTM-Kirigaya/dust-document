@@ -2,9 +2,11 @@
 title: 16.1 智能指针
 ---
 
-> [ch15-00-smart-pointers.md](https://github.com/rust-lang/book/blob/main/src/ch15-00-smart-pointers.md)
-> <br>
-> commit 5a3a64d60b0dd786c35ca4daada7a4d20da33e5e
+:::info
+[ch15-00-smart-pointers.md](https://github.com/rust-lang/book/blob/main/src/ch15-00-smart-pointers.md)
+<br>
+commit 5a3a64d60b0dd786c35ca4daada7a4d20da33e5e
+:::
 
 **指针** （*pointer*）是一个包含内存地址的变量的通用概念。这个地址引用，或 “指向”（points at）一些其他数据。Rust 中最常见的指针是第四章介绍的 **引用**（*reference*）。引用以 `&` 符号为标志并借用了它们所指向的值。除了引用数据没有任何其他特殊功能，也没有额外开销。
 

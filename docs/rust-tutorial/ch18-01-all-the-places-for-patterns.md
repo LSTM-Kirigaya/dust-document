@@ -2,9 +2,11 @@
 title: 19.2 所有可能会用到模式的位置
 ---
 
-> [ch18-01-all-the-places-for-patterns.md](https://github.com/rust-lang/book/blob/main/src/ch18-01-all-the-places-for-patterns.md)
-> <br>
-> commit 0c2d41e2afce734825c3a12087d423e8c2f0ae53
+:::info
+[ch18-01-all-the-places-for-patterns.md](https://github.com/rust-lang/book/blob/main/src/ch18-01-all-the-places-for-patterns.md)
+<br>
+commit 0c2d41e2afce734825c3a12087d423e8c2f0ae53
+:::
 
 模式出现在 Rust 的很多地方。你已经在不经意间使用了很多模式！本部分是一个所有有效模式位置的参考。
 

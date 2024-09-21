@@ -2,9 +2,11 @@
 title: 5.3 引用与借用
 ---
 
-> [ch04-02-references-and-borrowing.md](https://github.com/rust-lang/book/blob/main/src/ch04-02-references-and-borrowing.md)
-> <br>
-> commit 3d51f70c78162faaebcab0da0de2ddd333e7a8ed
+:::info
+[ch04-02-references-and-borrowing.md](https://github.com/rust-lang/book/blob/main/src/ch04-02-references-and-borrowing.md)
+<br>
+commit 3d51f70c78162faaebcab0da0de2ddd333e7a8ed
+:::
 
 示例 4-5 中的元组代码有这样一个问题：我们必须将 `String` 返回给调用函数，以便在调用 `calculate_length` 后仍能使用 `String`，因为 `String` 被移动到了 `calculate_length` 内。相反我们可以提供一个 `String` 值的引用（reference）。**引用**（*reference*）像一个指针，因为它是一个地址，我们可以由此访问储存于该地址的属于其他变量的数据。
 与指针不同，引用确保指向某个特定类型的有效值。
@@ -35,7 +37,9 @@ string data on the heap." src="./img/trpl04-05.svg" class="center" />
 
 <span class="caption">图 4-5：`&String s` 指向 `String s1` 示意图</span>
 
-> 注意：与使用 `&` 引用相反的操作是 **解引用**（*dereferencing*），它使用解引用运算符，`*`。我们将会在第八章遇到一些解引用运算符，并在第十五章详细讨论解引用。
+:::info
+注意：与使用 `&` 引用相反的操作是 **解引用**（*dereferencing*），它使用解引用运算符，`*`。我们将会在第八章遇到一些解引用运算符，并在第十五章详细讨论解引用。
+:::
 
 仔细看看这个函数调用：
 

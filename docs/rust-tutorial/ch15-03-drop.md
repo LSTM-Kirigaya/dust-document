@@ -2,9 +2,11 @@
 title: 16.4 使用 Drop Trait 运行清理代码
 ---
 
-> [ch15-03-drop.md](https://github.com/rust-lang/book/blob/main/src/ch15-03-drop.md)
-> <br>
-> commit 5a3a64d60b0dd786c35ca4daada7a4d20da33e5e
+:::info
+[ch15-03-drop.md](https://github.com/rust-lang/book/blob/main/src/ch15-03-drop.md)
+<br>
+commit 5a3a64d60b0dd786c35ca4daada7a4d20da33e5e
+:::
 
 对于智能指针模式来说第二个重要的 trait 是 `Drop`，其允许我们在值要离开作用域时执行一些代码。可以为任何类型提供 `Drop` trait 的实现，同时所指定的代码被用于释放类似于文件或网络连接的资源。
 

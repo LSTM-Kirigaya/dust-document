@@ -2,15 +2,19 @@
 title: 16.3 通过 Deref trait 将智能指针当作常规引用处理
 ---
 
-> [ch15-02-deref.md](https://github.com/rust-lang/book/blob/main/src/ch15-02-deref.md)
-> <br>
-> commit 0514b1cf34c2eaab8285f43305c10a87f4ce34a0
+:::info
+[ch15-02-deref.md](https://github.com/rust-lang/book/blob/main/src/ch15-02-deref.md)
+<br>
+commit 0514b1cf34c2eaab8285f43305c10a87f4ce34a0
+:::
 
 实现 `Deref` trait 允许我们重载 **解引用运算符**（_dereference operator_）`*`（不要与乘法运算符或通配符相混淆）。通过这种方式实现 `Deref` trait 的智能指针可以被当作常规引用来对待，可以编写操作引用的代码并用于智能指针。
 
 让我们首先看看解引用运算符如何处理常规引用，接着尝试定义我们自己的类似 `Box<T>` 的类型并看看为何解引用运算符不能像引用一样工作。我们会探索如何实现 `Deref` trait 使得智能指针以类似引用的方式工作变为可能。最后，我们会讨论 Rust 的 **Deref 强制转换**（_deref coercions_）功能以及它是如何处理引用或智能指针的。
 
-> 我们将要构建的 `MyBox<T>` 类型与真正的 `Box<T>` 有一个很大的区别：我们的版本不会在堆上储存数据。这个例子重点关注 `Deref`，所以其数据实际存放在何处，相比其类似指针的行为来说不算重要。
+:::info
+我们将要构建的 `MyBox<T>` 类型与真正的 `Box<T>` 有一个很大的区别：我们的版本不会在堆上储存数据。这个例子重点关注 `Deref`，所以其数据实际存放在何处，相比其类似指针的行为来说不算重要。
+:::
 
 ### 追踪指针的值
 

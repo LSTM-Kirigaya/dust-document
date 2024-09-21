@@ -2,9 +2,11 @@
 title: 6.4 方法语法
 ---
 
-> [ch05-03-method-syntax.md](https://github.com/rust-lang/book/blob/main/src/ch05-03-method-syntax.md)
-> <br>
-> commit d339373a838fd312a8a9bcc9487e1ffbc9e1582f
+:::info
+[ch05-03-method-syntax.md](https://github.com/rust-lang/book/blob/main/src/ch05-03-method-syntax.md)
+<br>
+commit d339373a838fd312a8a9bcc9487e1ffbc9e1582f
+:::
 
 **方法**（method）与函数类似：它们使用 `fn` 关键字和名称声明，可以拥有参数和返回值，同时包含在某处调用该方法时会执行的代码。不过方法与函数是不同的，因为它们在结构体的上下文中被定义（或者是枚举或 trait 对象的上下文，将分别在[第六章][enums]和[第十七章][trait-objects]讲解），并且它们第一个参数总是 `self`，它代表调用该方法的结构体实例。
 
@@ -77,36 +79,33 @@ fn main() {
 
 通常，但并不总是如此，与字段同名的方法将被定义为只返回字段中的值，而不做其他事情。这样的方法被称为 *getters*，Rust 并不像其他一些语言那样为结构字段自动实现它们。Getters 很有用，因为你可以把字段变成私有的，但方法是公共的，这样就可以把对字段的只读访问作为该类型公共 API 的一部分。我们将在[第七章][public]中讨论什么是公有和私有，以及如何将一个字段或方法指定为公有或私有。
 
-> ### `->` 运算符到哪去了？
->
-> 在 C/C++ 语言中，有两个不同的运算符来调用方法：`.` 直接在对象上调用方法，而 `->` 在一个对象的指针上调用方法，这时需要先解引用（dereference）指针。换句话说，如果 `object` 是一个指针，那么 `object->something()` 就像 `(*object).something()` 一样。
->
-> Rust 并没有一个与 `->` 等效的运算符；相反，Rust 有一个叫 **自动引用和解引用**（*automatic referencing and dereferencing*）的功能。方法调用是 Rust 中少数几个拥有这种行为的地方。
->
-> 它是这样工作的：当使用 `object.something()` 调用方法时，Rust 会自动为 `object` 添加 `&`、`&mut` 或 `*` 以便使 `object` 与方法签名匹配。也就是说，这些代码是等价的：
->
-> ```rust
-> # #[derive(Debug,Copy,Clone)]
-> # struct Point {
-> #     x: f64,
-> #     y: f64,
-> # }
-> #
-> # impl Point {
-> #    fn distance(&self, other: &Point) -> f64 {
-> #        let x_squared = f64::powi(other.x - self.x, 2);
-> #        let y_squared = f64::powi(other.y - self.y, 2);
-> #
-> #        f64::sqrt(x_squared + y_squared)
-> #    }
-> # }
-> # let p1 = Point { x: 0.0, y: 0.0 };
-> # let p2 = Point { x: 5.0, y: 6.5 };
-> p1.distance(&p2);
-> (&p1).distance(&p2);
-> ```
->
-> 第一行看起来简洁的多。这种自动引用的行为之所以有效，是因为方法有一个明确的接收者———— `self` 的类型。在给出接收者和方法名的前提下，Rust 可以明确地计算出方法是仅仅读取（`&self`），做出修改（`&mut self`）或者是获取所有权（`self`）。事实上，Rust 对方法接收者的隐式借用让所有权在实践中更友好。
+:::info
+### `->` 运算符到哪去了？
+>在 C/C++ 语言中，有两个不同的运算符来调用方法：`.` 直接在对象上调用方法，而 `->` 在一个对象的指针上调用方法，这时需要先解引用（dereference）指针。换句话说，如果 `object` 是一个指针，那么 `object->something()` 就像 `(*object).something()` 一样。
+>Rust 并没有一个与 `->` 等效的运算符；相反，Rust 有一个叫 **自动引用和解引用**（*automatic referencing and dereferencing*）的功能。方法调用是 Rust 中少数几个拥有这种行为的地方。
+>它是这样工作的：当使用 `object.something()` 调用方法时，Rust 会自动为 `object` 添加 `&`、`&mut` 或 `*` 以便使 `object` 与方法签名匹配。也就是说，这些代码是等价的：
+>```rust
+# #[derive(Debug,Copy,Clone)]
+# struct Point {
+#     x: f64,
+#     y: f64,
+# }
+#
+# impl Point {
+#    fn distance(&self, other: &Point) -> f64 {
+#        let x_squared = f64::powi(other.x - self.x, 2);
+#        let y_squared = f64::powi(other.y - self.y, 2);
+#
+#        f64::sqrt(x_squared + y_squared)
+#    }
+# }
+# let p1 = Point { x: 0.0, y: 0.0 };
+# let p2 = Point { x: 5.0, y: 6.5 };
+p1.distance(&p2);
+(&p1).distance(&p2);
+```
+>第一行看起来简洁的多。这种自动引用的行为之所以有效，是因为方法有一个明确的接收者———— `self` 的类型。在给出接收者和方法名的前提下，Rust 可以明确地计算出方法是仅仅读取（`&self`），做出修改（`&mut self`）或者是获取所有权（`self`）。事实上，Rust 对方法接收者的隐式借用让所有权在实践中更友好。
+:::
 
 ### 带有更多参数的方法
 

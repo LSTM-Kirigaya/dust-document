@@ -2,9 +2,11 @@
 title: 13.6 处理环境变量
 ---
 
-> [ch12-05-working-with-environment-variables.md](https://github.com/rust-lang/book/blob/main/src/ch12-05-working-with-environment-variables.md)
-> <br>
-> commit 9c0fa2714859738ff73cbbb829592e4c037d7e46
+:::info
+[ch12-05-working-with-environment-variables.md](https://github.com/rust-lang/book/blob/main/src/ch12-05-working-with-environment-variables.md)
+<br>
+commit 9c0fa2714859738ff73cbbb829592e4c037d7e46
+:::
 
 我们将增加一个额外的功能来改进 `minigrep`：用户可以通过设置环境变量来设置搜索是否是大小写敏感的。当然，我们也可以将其设计为一个命令行参数并要求用户每次需要时都加上它，不过在这里我们将使用环境变量。这允许用户设置环境变量一次之后在整个终端会话中所有的搜索都将是大小写不敏感的。
 

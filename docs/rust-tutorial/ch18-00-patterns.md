@@ -2,9 +2,11 @@
 title: 19.1 模式与模式匹配
 ---
 
-> [ch18-00-patterns.md](https://github.com/rust-lang/book/blob/main/src/ch18-00-patterns.md)
-> <br>
-> commit 6fce661a0938aa0da06526e7b8f98fd7e67a222f
+:::info
+[ch18-00-patterns.md](https://github.com/rust-lang/book/blob/main/src/ch18-00-patterns.md)
+<br>
+commit 6fce661a0938aa0da06526e7b8f98fd7e67a222f
+:::
 
 **模式**（*Patterns*）是 Rust 中特殊的语法，它用来匹配类型中的结构，无论类型是简单还是复杂。结合使用模式和 `match` 表达式以及其他结构可以提供更多对程序控制流的支配权。模式由如下一些内容组合而成：
 

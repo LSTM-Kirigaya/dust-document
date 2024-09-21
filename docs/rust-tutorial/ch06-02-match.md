@@ -2,9 +2,11 @@
 title: 7.3 match 控制流结构
 ---
 
-> [ch06-02-match.md](https://github.com/rust-lang/book/blob/main/src/ch06-02-match.md)
-> <br>
-> commit 3962c0224b274e2358e0acf06443af64df115359
+:::info
+[ch06-02-match.md](https://github.com/rust-lang/book/blob/main/src/ch06-02-match.md)
+<br>
+commit 3962c0224b274e2358e0acf06443af64df115359
+:::
 
 Rust 有一个叫做 `match` 的极为强大的控制流运算符，它允许我们将一个值与一系列的模式相比较，并根据相匹配的模式执行相应代码。模式可由字面值、变量、通配符和许多其他内容构成；[第十八章][ch18-00-patterns]会涉及到所有不同种类的模式以及它们的作用。`match` 的力量来源于模式的表现力以及编译器检查，它确保了所有可能的情况都得到处理。
 

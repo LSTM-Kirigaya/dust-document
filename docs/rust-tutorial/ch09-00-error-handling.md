@@ -2,9 +2,11 @@
 title: 10.1 错误处理
 ---
 
-> [ch09-00-error-handling.md](https://github.com/rust-lang/book/blob/main/src/ch09-00-error-handling.md)
-> <br>
-> commit 199ca99926f232ee7f581a917eada4b65ff21754
+:::info
+[ch09-00-error-handling.md](https://github.com/rust-lang/book/blob/main/src/ch09-00-error-handling.md)
+<br>
+commit 199ca99926f232ee7f581a917eada4b65ff21754
+:::
 
 错误是软件中不可否认的事实，所以 Rust 有一些处理出错情况的特性。在许多情况下，Rust 要求你承认错误的可能性，并在你的代码编译前采取一些行动。这一要求使你的程序更加健壮，因为它可以确保你在将代码部署到生产环境之前就能发现错误并进行适当的处理。
 

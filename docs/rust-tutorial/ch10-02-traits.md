@@ -2,13 +2,17 @@
 title: 11.3 Trait：定义共同行为
 ---
 
-> [ch10-02-traits.md](https://github.com/rust-lang/book/blob/main/src/ch10-02-traits.md)
-> <br>
-> commit 92bfbfacf88ee9a814cea0a58e9c019c529ef4ae
+:::info
+[ch10-02-traits.md](https://github.com/rust-lang/book/blob/main/src/ch10-02-traits.md)
+<br>
+commit 92bfbfacf88ee9a814cea0a58e9c019c529ef4ae
+:::
 
 *trait* 定义了某个特定类型拥有可能与其他类型共享的功能。可以通过 trait 以一种抽象的方式定义共同行为。可以使用 *trait bounds* 指定泛型是任何拥有特定行为的类型。
 
-> 注意：*trait* 类似于其他语言中的常被称为 **接口**（*interfaces*）的功能，虽然有一些不同。
+:::info
+注意：*trait* 类似于其他语言中的常被称为 **接口**（*interfaces*）的功能，虽然有一些不同。
+:::
 
 ### 定义 trait
 

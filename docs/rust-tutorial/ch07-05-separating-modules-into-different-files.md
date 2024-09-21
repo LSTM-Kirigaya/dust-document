@@ -2,9 +2,11 @@
 title: 8.6 将模块拆分成多个文件
 ---
 
-> [ch07-05-separating-modules-into-different-files.md](https://github.com/rust-lang/book/blob/main/src/ch07-05-separating-modules-into-different-files.md)
-> <br>
-> commit 2b4565662d1a7973d870744a923f58f8f7dcce91
+:::info
+[ch07-05-separating-modules-into-different-files.md](https://github.com/rust-lang/book/blob/main/src/ch07-05-separating-modules-into-different-files.md)
+<br>
+commit 2b4565662d1a7973d870744a923f58f8f7dcce91
+:::
 
 到目前为止，本章所有的例子都在一个文件中定义多个模块。当模块变得更大时，你可能想要将它们的定义移动到单独的文件中，从而使代码更容易阅读。
 
@@ -61,23 +63,18 @@ pub fn add_to_waitlist() {}
 
 如果将 *hosting.rs* 放在 *src* 目录，编译器会认为 `hosting` 模块中的 *hosting.rs* 的代码声明于 crate 根，而不是声明为 `front_of_house` 的子模块。编译器所遵循的哪些文件对应哪些模块的代码的规则，意味着目录和文件更接近于模块树。
 
-> ### 另一种文件路径
->
-> 目前为止我们介绍了 Rust 编译器所最常用的文件路径；不过一种更老的文件路径也仍然是支持的。
->
-> 对于声明于 crate 根的 `front_of_house` 模块，编译器会在如下位置查找模块代码：
->
-> * *src/front_of_house.rs*（我们所介绍的）
-> * *src/front_of_house/mod.rs*（老风格，不过仍然支持）
->
-> 对于 `front_of_house` 的子模块 `hosting`，编译器会在如下位置查找模块代码：
->
-> * *src/front_of_house/hosting.rs*（我们所介绍的）
-> * *src/front_of_house/hosting/mod.rs*（老风格，不过仍然支持）
->
-> 如果你对同一模块同时使用这两种路径风格，会得到一个编译错误。在同一项目中的不同模块混用不同的路径风格是允许的，不过这会使他人感到疑惑。
->
-> 使用 *mod.rs* 这一文件名的风格的主要缺点是会导致项目中出现很多 *mod.rs* 文件，当你在编辑器中同时打开它们时会感到疑惑。
+:::info
+### 另一种文件路径
+>目前为止我们介绍了 Rust 编译器所最常用的文件路径；不过一种更老的文件路径也仍然是支持的。
+>对于声明于 crate 根的 `front_of_house` 模块，编译器会在如下位置查找模块代码：
+>* *src/front_of_house.rs*（我们所介绍的）
+* *src/front_of_house/mod.rs*（老风格，不过仍然支持）
+>对于 `front_of_house` 的子模块 `hosting`，编译器会在如下位置查找模块代码：
+>* *src/front_of_house/hosting.rs*（我们所介绍的）
+* *src/front_of_house/hosting/mod.rs*（老风格，不过仍然支持）
+>如果你对同一模块同时使用这两种路径风格，会得到一个编译错误。在同一项目中的不同模块混用不同的路径风格是允许的，不过这会使他人感到疑惑。
+>使用 *mod.rs* 这一文件名的风格的主要缺点是会导致项目中出现很多 *mod.rs* 文件，当你在编辑器中同时打开它们时会感到疑惑。
+:::
 
 我们将各个模块的代码移动到独立文件了，同时模块树依旧相同。`eat_at_restaurant` 中的函数调用也无需修改继续保持有效，即便其定义存在于不同的文件中。这个技巧让你可以在模块代码增长时，将它们移动到新文件中。
 

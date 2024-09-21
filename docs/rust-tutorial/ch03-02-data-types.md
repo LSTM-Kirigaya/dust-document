@@ -2,9 +2,11 @@
 title: 4.3 数据类型
 ---
 
-> [ch03-02-data-types.md](https://github.com/rust-lang/book/blob/main/src/ch03-02-data-types.md)
-> <br>
-> commit d0acb2595c891de97a133d06635c50ab449dd65c
+:::info
+[ch03-02-data-types.md](https://github.com/rust-lang/book/blob/main/src/ch03-02-data-types.md)
+<br>
+commit d0acb2595c891de97a133d06635c50ab449dd65c
+:::
 
 在 Rust 中，每一个值都属于某一个 **数据类型**（*data type*），这告诉 Rust 它被指定为何种数据，以便明确数据处理方式。我们将看到两类数据类型子集：标量（scalar）和复合（compound）。
 
@@ -76,17 +78,16 @@ error: could not compile `no_type_annotations` (bin "no_type_annotations") due t
 
 那么该使用哪种类型的数字呢？如果拿不定主意，Rust 的默认类型通常是个不错的起点，数字类型默认是 `i32`。`isize` 或 `usize` 主要作为某些集合的索引。
 
-> ##### 整型溢出
->
-> 比方说有一个 `u8` ，它可以存放从零到 `255` 的值。那么当你将其修改为 `256` 时会发生什么呢？这被称为 “整型溢出”（“integer overflow” ），这会导致以下两种行为之一的发生。当在 debug 模式编译时，Rust 检查这类问题并使程序 *panic*，这个术语被 Rust 用来表明程序因错误而退出。第九章 [“`panic!` 与不可恢复的错误”][unrecoverable-errors-with-panic] 部分会详细介绍 panic。
->
-> 使用 `--release` flag 在 release 模式中构建时，Rust **不会**检测会导致 panic 的整型溢出。相反发生整型溢出时，Rust 会进行一种被称为二进制补码 wrapping（*two’s complement wrapping*）的操作。简而言之，比此类型能容纳最大值还大的值会回绕到最小值，值 `256` 变成 `0`，值 `257` 变成 `1`，依此类推。程序不会 panic，不过变量可能也不会是你所期望的值。依赖整型溢出 wrapping 的行为被认为是一种错误。
->
-> 为了显式地处理溢出的可能性，可以使用这几类标准库提供的原始数字类型方法：
-> * 所有模式下都可以使用 `wrapping_*` 方法进行 wrapping，如 `wrapping_add`
-> * 如果 `checked_*` 方法出现溢出，则返回 `None`值
-> * 用 `overflowing_*` 方法返回值和一个布尔值，表示是否出现溢出
-> * 用 `saturating_*` 方法在值的最小值或最大值处进行饱和处理
+:::info
+##### 整型溢出
+>比方说有一个 `u8` ，它可以存放从零到 `255` 的值。那么当你将其修改为 `256` 时会发生什么呢？这被称为 “整型溢出”（“integer overflow” ），这会导致以下两种行为之一的发生。当在 debug 模式编译时，Rust 检查这类问题并使程序 *panic*，这个术语被 Rust 用来表明程序因错误而退出。第九章 [“`panic!` 与不可恢复的错误”][unrecoverable-errors-with-panic] 部分会详细介绍 panic。
+>使用 `--release` flag 在 release 模式中构建时，Rust **不会**检测会导致 panic 的整型溢出。相反发生整型溢出时，Rust 会进行一种被称为二进制补码 wrapping（*two’s complement wrapping*）的操作。简而言之，比此类型能容纳最大值还大的值会回绕到最小值，值 `256` 变成 `0`，值 `257` 变成 `1`，依此类推。程序不会 panic，不过变量可能也不会是你所期望的值。依赖整型溢出 wrapping 的行为被认为是一种错误。
+>为了显式地处理溢出的可能性，可以使用这几类标准库提供的原始数字类型方法：
+* 所有模式下都可以使用 `wrapping_*` 方法进行 wrapping，如 `wrapping_add`
+* 如果 `checked_*` 方法出现溢出，则返回 `None`值
+* 用 `overflowing_*` 方法返回值和一个布尔值，表示是否出现溢出
+* 用 `saturating_*` 方法在值的最小值或最大值处进行饱和处理
+:::
 
 #### 浮点型
 

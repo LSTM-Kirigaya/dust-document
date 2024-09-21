@@ -2,9 +2,11 @@
 title: 8.2 包和 Crate
 ---
 
-> [ch07-01-packages-and-crates.md](https://github.com/rust-lang/book/blob/main/src/ch07-01-packages-and-crates.md)
-> <br>
-> commit c77d7a1279dbc7a9d76e80c5ac9d742dd529538c
+:::info
+[ch07-01-packages-and-crates.md](https://github.com/rust-lang/book/blob/main/src/ch07-01-packages-and-crates.md)
+<br>
+commit c77d7a1279dbc7a9d76e80c5ac9d742dd529538c
+:::
 
 模块系统的第一部分，我们将介绍包和 crate。
 

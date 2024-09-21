@@ -2,9 +2,11 @@
 title: 19.4 所有的模式语法
 ---
 
-> [ch18-03-pattern-syntax.md](https://github.com/rust-lang/book/blob/main/src/ch18-03-pattern-syntax.md)
-> <br>
-> commit 6fce661a0938aa0da06526e7b8f98fd7e67a222f
+:::info
+[ch18-03-pattern-syntax.md](https://github.com/rust-lang/book/blob/main/src/ch18-03-pattern-syntax.md)
+<br>
+commit 6fce661a0938aa0da06526e7b8f98fd7e67a222f
+:::
 
 在本节中，我们收集了模式中所有有效的语法，并讨论为什么以及何时你可能要使用这些语法。
 

@@ -2,9 +2,11 @@
 title: 13.3 读取文件
 ---
 
-> [ch12-02-reading-a-file.md](https://github.com/rust-lang/book/blob/main/src/ch12-02-reading-a-file.md)
-> <br>
-> commit 02a168ed346042f07010f8b65b4eeed623dd31d1
+:::info
+[ch12-02-reading-a-file.md](https://github.com/rust-lang/book/blob/main/src/ch12-02-reading-a-file.md)
+<br>
+commit 02a168ed346042f07010f8b65b4eeed623dd31d1
+:::
 
 现在我们要增加读取由 `file_path` 命令行参数指定的文件的功能。首先，需要一个用来测试的示例文件：我们会用一个拥有多行少量文本且有一些重复单词的文件。示例 12-3 是一首艾米莉·狄金森（Emily Dickinson）的诗，它正适合这个工作！在项目根目录创建一个文件 `poem.txt`，并输入诗 "I'm nobody! Who are you?"：
 

@@ -2,9 +2,11 @@
 title: 17.4 共享状态的并发
 ---
 
-> [ch16-03-shared-state.md](https://github.com/rust-lang/book/blob/main/src/ch16-03-shared-state.md)
-> <br>
-> commit 856d89c53a6d69470bb5669c773fdfe6aab6fcc9
+:::info
+[ch16-03-shared-state.md](https://github.com/rust-lang/book/blob/main/src/ch16-03-shared-state.md)
+<br>
+commit 856d89c53a6d69470bb5669c773fdfe6aab6fcc9
+:::
 
 消息传递是一个很好的处理并发的方式，但并不是唯一一个。另一种方式是让多个线程访问同一块内存中的数据（共享状态）。再考虑一下 Go 语言文档中的这句口号：“不要通过共享内存来通讯”（“do not communicate by sharing memory.”
 

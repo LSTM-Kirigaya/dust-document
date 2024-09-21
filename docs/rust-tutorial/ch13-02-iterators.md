@@ -2,9 +2,11 @@
 title: 14.3 使用迭代器处理元素序列
 ---
 
-> [ch13-02-iterators.md](https://github.com/rust-lang/book/blob/main/src/ch13-02-iterators.md)
-> <br>
-> commit eabaaaa90ee6937db3690dc56f739116be55ecb2
+:::info
+[ch13-02-iterators.md](https://github.com/rust-lang/book/blob/main/src/ch13-02-iterators.md)
+<br>
+commit eabaaaa90ee6937db3690dc56f739116be55ecb2
+:::
 
 迭代器模式允许你依次对一个序列中的项执行某些操作。**迭代器**（*iterator*）负责遍历序列中的每一项并确定序列何时结束的逻辑。使用迭代器时，你无需自己重新实现这些逻辑。
 

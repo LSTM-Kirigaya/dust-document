@@ -2,9 +2,11 @@
 title: 6.2 结构体的定义和实例化
 ---
 
-> [ch05-01-defining-structs.md](https://github.com/rust-lang/book/blob/main/src/ch05-01-defining-structs.md)
-> <br>
-> commit a371f82b0916cf21de2d56bd386ca5d72f7699b0
+:::info
+[ch05-01-defining-structs.md](https://github.com/rust-lang/book/blob/main/src/ch05-01-defining-structs.md)
+<br>
+commit a371f82b0916cf21de2d56bd386ca5d72f7699b0
+:::
 
 结构体和我们在[“元组类型”][tuples]部分论过的元组类似，它们都包含多个相关的值。和元组一样，结构体的每一部分可以是不同类型。但不同于元组，结构体需要命名各部分数据以便能清楚的表明其值的意义。由于有了这些名字，结构体比元组更灵活：不需要依赖顺序来指定或访问实例中的值。
 
@@ -177,69 +179,66 @@ fn main() {
 
 为了定义 `AlwaysEqual`，我们使用 `struct` 关键字，接着是我们想要的名称，然后是一个分号。不需要花括号或圆括号！然后，我们可以以类似的方式在 `subject` 变量中创建 `AlwaysEqual` 的实例：只需使用我们定义的名称，无需任何花括号或圆括号。设想我们稍后将为这个类型实现某种行为，使得每个 `AlwaysEqual` 的实例始终等于任何其它类型的实例，也许是为了获得一个已知的结果以便进行测试。我们无需要任何数据来实现这种行为！在第十章中，你会看到如何定义特征并在任何类型上实现它们，包括类单元结构体。
 
-> ### 结构体数据的所有权
->
-> 在示例 5-1 中的 `User` 结构体的定义中，我们使用了自身拥有所有权的 `String` 类型而不是 `&str` 字符串 slice 类型。这是一个有意而为之的选择，因为我们想要这个结构体拥有它所有的数据，为此只要整个结构体是有效的话其数据也是有效的。
->
-> 可以使结构体存储被其他对象拥有的数据的引用，不过这么做的话需要用上 **生命周期**（*lifetimes*），这是一个第十章会讨论的 Rust 功能。生命周期确保结构体引用的数据有效性跟结构体本身保持一致。如果你尝试在结构体中存储一个引用而不指定生命周期将是无效的，比如这样：
->
-> <span class="filename">文件名：src/main.rs</span>
->
-> ```rust
-> struct User {
->     active: bool,
->     username: &str,
->     email: &str,
->     sign_in_count: u64,
-> }
->
-> fn main() {
->     let user1 = User {
->         active: true,
->         username: "someusername123",
->         email: "someone@example.com",
->         sign_in_count: 1,
->     };
-> }
-> ```
->
-> 编译器会抱怨它需要生命周期标识符：
->
-> ```console
-> $ cargo run
->    Compiling structs v0.1.0 (file:///projects/structs)
-> error[E0106]: missing lifetime specifier
->  --> src/main.rs:3:15
->   |
-> 3 |     username: &str,
->   |               ^ expected named lifetime parameter
->   |
-> help: consider introducing a named lifetime parameter
->   |
-> 1 ~ struct User<'a> {
-> 2 |     active: bool,
-> 3 ~     username: &'a str,
->   |
->
-> error[E0106]: missing lifetime specifier
->  --> src/main.rs:4:12
->   |
-> 4 |     email: &str,
->   |            ^ expected named lifetime parameter
->   |
-> help: consider introducing a named lifetime parameter
->   |
-> 1 ~ struct User<'a> {
-> 2 |     active: bool,
-> 3 |     username: &str,
-> 4 ~     email: &'a str,
->   |
->
-> For more information about this error, try `rustc --explain E0106`.
-> error: could not compile `structs` due to 2 previous errors
-> ```
->
-> 第十章会讲到如何修复这个问题以便在结构体中存储引用，不过现在，我们会使用像 `String` 这类拥有所有权的类型来替代 `&str` 这样的引用以修正这个错误。
+:::info 结构体数据的所有权
+在示例 5-1 中的 `User` 结构体的定义中，我们使用了自身拥有所有权的 `String` 类型而不是 `&str` 字符串 slice 类型。这是一个有意而为之的选择，因为我们想要这个结构体拥有它所有的数据，为此只要整个结构体是有效的话其数据也是有效的。
+
+可以使结构体存储被其他对象拥有的数据的引用，不过这么做的话需要用上 **生命周期**（*lifetimes*），这是一个第十章会讨论的 Rust 功能。生命周期确保结构体引用的数据有效性跟结构体本身保持一致。如果你尝试在结构体中存储一个引用而不指定生命周期将是无效的，比如这样：
+
+<span class="filename">文件名：src/main.rs</span>
+
+```rust
+struct User {
+    active: bool,
+    username: &str,
+    email: &str,
+    sign_in_count: u64,
+}
+
+fn main() {
+    let user1 = User {
+        active: true,
+        username: "someusername123",
+        email: "someone@example.com",
+        sign_in_count: 1,
+    };
+}
+```
+
+编译器会抱怨它需要生命周期标识符：
+```console
+$ cargo run
+Compiling structs v0.1.0 (file:///projects/structs)
+error[E0106]: missing lifetime specifier
+--> src/main.rs:3:15
+|
+3 |     username: &str,
+|               ^ expected named lifetime parameter
+|
+help: consider introducing a named lifetime parameter
+|
+1 ~ struct User<'a> {
+2 |     active: bool,
+3 ~     username: &'a str,
+|
+>error[E0106]: missing lifetime specifier
+--> src/main.rs:4:12
+|
+4 |     email: &str,
+|            ^ expected named lifetime parameter
+|
+help: consider introducing a named lifetime parameter
+|
+1 ~ struct User<'a> {
+2 |     active: bool,
+3 |     username: &str,
+4 ~     email: &'a str,
+|
+>For more information about this error, try `rustc --explain E0106`.
+error: could not compile `structs` due to 2 previous errors
+```
+
+第十章会讲到如何修复这个问题以便在结构体中存储引用，不过现在，我们会使用像 `String` 这类拥有所有权的类型来替代 `&str` 这样的引用以修正这个错误。
+:::
 
 [tuples]: ch03-02-data-types.html#元组类型
 [move]: ch04-01-what-is-ownership.html#变量与数据交互的方式一移动

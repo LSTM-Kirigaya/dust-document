@@ -2,9 +2,11 @@
 title: 20.7 宏
 ---
 
-> [ch19-06-macros.md](https://github.com/rust-lang/book/blob/main/src/ch19-06-macros.md)
-> <br>
-> commit 95e931170404cb98d476b19017cbbdbc00d0834d
+:::info
+[ch19-06-macros.md](https://github.com/rust-lang/book/blob/main/src/ch19-06-macros.md)
+<br>
+commit 95e931170404cb98d476b19017cbbdbc00d0834d
+:::
 
 我们已经在本书中使用过像 `println!` 这样的宏了，不过还没完全探索什么是宏以及它是如何工作的。**宏**（*Macro*）指的是 Rust 中一系列的功能：使用 `macro_rules!` 的 **声明**（*Declarative*）宏，和三种 **过程**（*Procedural*）宏：
 
@@ -59,7 +61,9 @@ macro_rules! vec {
 
 <span class="caption">示例 19-28: 一个 `vec!` 宏定义的简化版本</span>
 
-> 注意：标准库中实际定义的 `vec!` 包括预分配适当量的内存的代码。这部分为代码优化，为了让示例简化，此处并没有包含在内。
+:::info
+注意：标准库中实际定义的 `vec!` 包括预分配适当量的内存的代码。这部分为代码优化，为了让示例简化，此处并没有包含在内。
+:::
 
 
 `#[macro_export]` 注解表明只要导入了定义这个宏的 crate，该宏就应该是可用的。如果没有该注解，这个宏不能被引入作用域。

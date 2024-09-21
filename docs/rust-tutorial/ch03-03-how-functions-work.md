@@ -2,9 +2,11 @@
 title: 4.4 函数
 ---
 
-> [ch03-03-how-functions-work.md](https://github.com/rust-lang/book/blob/main/src/ch03-03-how-functions-work.md)
-> <br>
-> commit d0acb2595c891de97a133d06635c50ab449dd65c
+:::info
+[ch03-03-how-functions-work.md](https://github.com/rust-lang/book/blob/main/src/ch03-03-how-functions-work.md)
+<br>
+commit d0acb2595c891de97a133d06635c50ab449dd65c
+:::
 
 函数在 Rust 代码中非常普遍。你已经见过语言中最重要的函数之一：`main` 函数，它是很多程序的入口点。你也见过 `fn` 关键字，它用来声明新函数。
 

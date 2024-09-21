@@ -2,9 +2,11 @@
 title: 15.4 Cargo 工作空间
 ---
 
-> [ch14-03-cargo-workspaces.md](https://github.com/rust-lang/book/blob/main/src/ch14-03-cargo-workspaces.md)
-> <br>
-> commit 704c51eec2f26a0133ae17a2c01986590c05a045
+:::info
+[ch14-03-cargo-workspaces.md](https://github.com/rust-lang/book/blob/main/src/ch14-03-cargo-workspaces.md)
+<br>
+commit 704c51eec2f26a0133ae17a2c01986590c05a045
+:::
 
 第十二章中，我们构建一个包含二进制 crate 和库 crate 的包。你可能会发现，随着项目开发的深入，库 crate 持续增大，而你希望将其进一步拆分成多个库 crate。Cargo 提供了一个叫 **工作空间**（*workspaces*）的功能，它可以帮助我们管理多个相关的协同开发的包。
 

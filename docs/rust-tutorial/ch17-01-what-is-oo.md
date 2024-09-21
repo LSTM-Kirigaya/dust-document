@@ -2,9 +2,11 @@
 title: 18.2 面向对象语言的特征
 ---
 
-> [ch17-01-what-is-oo.md](https://github.com/rust-lang/book/blob/main/src/ch17-01-what-is-oo.md)
-> <br>
-> commit 398d6f48d2e6b7b15efd51c4541d446e89de3892
+:::info
+[ch17-01-what-is-oo.md](https://github.com/rust-lang/book/blob/main/src/ch17-01-what-is-oo.md)
+<br>
+commit 398d6f48d2e6b7b15efd51c4541d446e89de3892
+:::
 
 关于一门语言必须具备哪些特征才能被视为面向对象，目前在编程社区中并没有共识。Rust 受到了许多编程范式的影响，包括面向对象编程（OOP）；例如，在第 13 章中，我们探讨了来自函数式编程的特性。可以说，面向对象的语言共有一些共同的特征，即对象、封装和继承。我们将会讨论这些特征分别是什么，以及 Rust 是否支持它们。
 
@@ -12,11 +14,12 @@ title: 18.2 面向对象语言的特征
 
 由 Erich Gamma、Richard Helm、Ralph Johnson 和 John Vlissides（Addison-Wesley Professional, 1994）编写的书 *Design Patterns: Elements of Reusable Object-Oriented Software* ，通称 *The Gang of Four* (“四人帮”)，是一本面向对象设计模式的目录。它这样定义面向对象编程：
 
-> Object-oriented programs are made up of objects. An *object* packages both
-> data and the procedures that operate on that data. The procedures are
-> typically called *methods* or *operations*.
->
-> 面向对象的程序由对象组成。一个 **对象** 包含数据和操作这些数据的过程。这些过程通常被称为 **方法** 或 **操作**。
+:::info
+Object-oriented programs are made up of objects. An *object* packages both
+data and the procedures that operate on that data. The procedures are
+typically called *methods* or *operations*.
+>面向对象的程序由对象组成。一个 **对象** 包含数据和操作这些数据的过程。这些过程通常被称为 **方法** 或 **操作**。
+:::
 
 在这个定义下，Rust 是面向对象的：结构体和枚举包含数据而 `impl` 块提供了在结构体和枚举之上的方法。虽然带有方法的结构体和枚举并不被 **称为** 对象，但是它们提供了与对象相同的功能，参考 *The Gang of Four* 中对象的定义。
 
@@ -92,10 +95,11 @@ impl AveragedCollection {
 
 其二与类型系统有关：子类型可以用于父类型被使用的地方。这也被称为 **多态**（*polymorphism*）：如果多个对象共享某些特征，可以在运行时将它们互相替代。
 
-> 多态（Polymorphism）
->
-> 对很多人来说，多态性与继承同义。但它实际上是一个更广义的概念，指的是可以处理多种类型数据的代码。对继承而言，这些类型通常是子类。
-> Rust 使用泛型来抽象不同可能的类型，并通过 trait bounds 来约束这些类型所必须提供的内容。这有时被称为 *bounded parametric polymorphism*。
+:::info
+多态（Polymorphism）
+>对很多人来说，多态性与继承同义。但它实际上是一个更广义的概念，指的是可以处理多种类型数据的代码。对继承而言，这些类型通常是子类。
+Rust 使用泛型来抽象不同可能的类型，并通过 trait bounds 来约束这些类型所必须提供的内容。这有时被称为 *bounded parametric polymorphism*。
+:::
 
 作为一种语言设计的解决方案，继承在许多新的编程语言中逐渐不被青睐，因为它经常有分享过多代码的风险。子类不应总是共享父类的所有特征，但是继承始终如此。它还引入了在子类上调用方法的可能性，这些方法可能没有意义，或因为方法不适用于子类而导致错误。此外，一些语言只允许单一继承（意味着子类只能从一个类继承），进一步限制了程序设计的灵活性。
 

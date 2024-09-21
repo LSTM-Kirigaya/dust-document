@@ -2,9 +2,11 @@
 title: 13.5 采用测试驱动开发完善库的功能
 ---
 
-> [ch12-04-testing-the-librarys-functionality.md](https://github.com/rust-lang/book/blob/main/src/ch12-04-testing-the-librarys-functionality.md)
-> <br>
-> commit 8fd2327e4135876b368cc2793eb4a7e455b691f0
+:::info
+[ch12-04-testing-the-librarys-functionality.md](https://github.com/rust-lang/book/blob/main/src/ch12-04-testing-the-librarys-functionality.md)
+<br>
+commit 8fd2327e4135876b368cc2793eb4a7e455b691f0
+:::
 
 现在我们将逻辑提取到了 *src/lib.rs* 并将所有的参数解析和错误处理留在了 *src/main.rs* 中，为代码的核心功能编写测试将更加容易。我们可以直接使用多种参数调用函数并检查返回值而无需从命令行运行二进制文件了。
 

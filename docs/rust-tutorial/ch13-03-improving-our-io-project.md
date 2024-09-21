@@ -2,9 +2,11 @@
 title: 14.4 改进 I/O 项目
 ---
 
-> [ch13-03-improving-our-io-project.md](https://github.com/rust-lang/book/blob/main/src/ch13-03-improving-our-io-project.md)
-> <br>
-> commit 2cd1b5593d26dc6a03c20f8619187ad4b2485552
+:::info
+[ch13-03-improving-our-io-project.md](https://github.com/rust-lang/book/blob/main/src/ch13-03-improving-our-io-project.md)
+<br>
+commit 2cd1b5593d26dc6a03c20f8619187ad4b2485552
+:::
 
 掌握了这些关于迭代器的新知识后，我们可以使用迭代器来改进第十二章中 I/O 项目的实现来使得代码更简洁明了。接下来，让我们看看迭代器如何改进 `Config::build` 函数和 `search` 函数的实现。
 

@@ -2,9 +2,11 @@
 title: 21.2 构建单线程 web server
 ---
 
-> [ch20-01-single-threaded.md](https://github.com/rust-lang/book/blob/main/src/ch20-01-single-threaded.md)
-> <br>
-> commit 5df6909c57b3ba55f156a4122a42b805436de90c
+:::info
+[ch20-01-single-threaded.md](https://github.com/rust-lang/book/blob/main/src/ch20-01-single-threaded.md)
+<br>
+commit 5df6909c57b3ba55f156a4122a42b805436de90c
+:::
 
 首先让我们创建一个可运行的单线程 web server，不过在开始之前，我们将快速了解一下构建 web server 所涉及到的协议。这些协议的细节超出了本书的范畴，不过一个简单的概括会提供我们所需的信息。
 

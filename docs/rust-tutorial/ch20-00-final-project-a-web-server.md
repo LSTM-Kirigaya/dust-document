@@ -2,9 +2,11 @@
 title: 21.1 最后的项目：构建多线程 web server
 ---
 
-> [ch20-00-final-project-a-web-server.md](https://github.com/rust-lang/book/blob/main/src/ch20-00-final-project-a-web-server.md)
-> <br>
-> commit 5df6909c57b3ba55f156a4122a42b805436de90c
+:::info
+[ch20-00-final-project-a-web-server.md](https://github.com/rust-lang/book/blob/main/src/ch20-00-final-project-a-web-server.md)
+<br>
+commit 5df6909c57b3ba55f156a4122a42b805436de90c
+:::
 
 这是一次漫长的旅途，不过我们到达了本书的结束。在本章中，我们将一同构建另一个项目，来展示最后几章所学，同时复习更早的章节。
 

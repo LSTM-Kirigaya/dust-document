@@ -2,9 +2,11 @@
 title: 20.2 不安全 Rust
 ---
 
-> [ch19-01-unsafe-rust.md](https://github.com/rust-lang/book/blob/main/src/ch19-01-unsafe-rust.md)
-> <br>
-> commit 057b0d338229b87d06be772346ea0b643bdecdc5
+:::info
+[ch19-01-unsafe-rust.md](https://github.com/rust-lang/book/blob/main/src/ch19-01-unsafe-rust.md)
+<br>
+commit 057b0d338229b87d06be772346ea0b643bdecdc5
+:::
 
 目前为止讨论过的代码都有 Rust 在编译时会强制执行的内存安全保证。然而，Rust 还隐藏有第二种语言，它不会强制执行这类内存安全保证：这被称为 **不安全 Rust**（*unsafe Rust*）。它与常规 Rust 代码无异，但是会提供额外的超能力。
 
@@ -256,20 +258,18 @@ fn main() {
 
 在 `extern "C"` 块中，列出了我们希望能够调用的另一个语言中的外部函数的签名和名称。`"C"` 部分定义了外部函数所使用的 **应用二进制接口**（*application binary interface*，ABI） —— ABI 定义了如何在汇编语言层面调用此函数。`"C"` ABI 是最常见的，并遵循 C 编程语言的 ABI。
 
-> #### 从其它语言调用 Rust 函数
->
-> 也可以使用 `extern` 来创建一个允许其他语言调用 Rust 函数的接口。不同于创建整个 `extern` 块，就在 `fn` 关键字之前增加 `extern` 关键字并为相关函数指定所用到的 ABI。还需增加 `#[no_mangle]` 注解来告诉 Rust 编译器不要 mangle 此函数的名称。*Mangling* 发生于当编译器将我们指定的函数名修改为不同的名称时，这会增加用于其他编译过程的额外信息，不过会使其名称更难以阅读。每一个编程语言的编译器都会以稍微不同的方式 mangle 函数名，所以为了使 Rust 函数能在其他语言中指定，必须禁用 Rust 编译器的 name mangling。
->
-> 在如下的例子中，一旦其编译为动态库并从 C 语言中链接，`call_from_c` 函数就能够在 C 代码中访问：
->
-> ```rust
-> #[no_mangle]
-> pub extern "C" fn call_from_c() {
->     println!("Just called a Rust function from C!");
-> }
-> ```
->
-> `extern` 的使用无需 `unsafe`。
+:::info
+#### 从其它语言调用 Rust 函数
+>也可以使用 `extern` 来创建一个允许其他语言调用 Rust 函数的接口。不同于创建整个 `extern` 块，就在 `fn` 关键字之前增加 `extern` 关键字并为相关函数指定所用到的 ABI。还需增加 `#[no_mangle]` 注解来告诉 Rust 编译器不要 mangle 此函数的名称。*Mangling* 发生于当编译器将我们指定的函数名修改为不同的名称时，这会增加用于其他编译过程的额外信息，不过会使其名称更难以阅读。每一个编程语言的编译器都会以稍微不同的方式 mangle 函数名，所以为了使 Rust 函数能在其他语言中指定，必须禁用 Rust 编译器的 name mangling。
+>在如下的例子中，一旦其编译为动态库并从 C 语言中链接，`call_from_c` 函数就能够在 C 代码中访问：
+>```rust
+#[no_mangle]
+pub extern "C" fn call_from_c() {
+println!("Just called a Rust function from C!");
+}
+```
+>`extern` 的使用无需 `unsafe`。
+:::
 
 ### 访问或修改可变静态变量
 

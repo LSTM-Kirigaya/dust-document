@@ -2,9 +2,11 @@
 title: 16.2 使用Box<T>指向堆上的数据
 ---
 
-> [ch15-01-box.md](https://github.com/rust-lang/book/blob/main/src/ch15-01-box.md)
-> <br>
-> commit 5a3a64d60b0dd786c35ca4daada7a4d20da33e5e
+:::info
+[ch15-01-box.md](https://github.com/rust-lang/book/blob/main/src/ch15-01-box.md)
+<br>
+commit 5a3a64d60b0dd786c35ca4daada7a4d20da33e5e
+:::
 
 最简单直接的智能指针是 _box_，其类型是 `Box<T>`。box 允许你将一个值放在堆上而不是栈上。留在栈上的则是指向堆数据的指针。如果你想回顾一下栈与堆的区别请参考第四章。
 
@@ -70,7 +72,9 @@ enum List {
 
 <span class="caption">示例 15-2：第一次尝试定义一个代表 `i32` 值的 cons list 数据结构的枚举</span>
 
-> 注意：出于示例的需要我们选择实现一个只存放 `i32` 值的 cons list。也可以用泛型，正如第十章讲到的，来定义一个可以存放任何类型值的 cons list 类型。
+:::info
+注意：出于示例的需要我们选择实现一个只存放 `i32` 值的 cons list。也可以用泛型，正如第十章讲到的，来定义一个可以存放任何类型值的 cons list 类型。
+:::
 
 使用这个 cons list 来储存列表 `1, 2, 3` 将看起来如示例 15-3 所示：
 

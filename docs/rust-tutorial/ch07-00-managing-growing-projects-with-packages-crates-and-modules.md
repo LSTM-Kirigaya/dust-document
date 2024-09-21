@@ -2,9 +2,11 @@
 title: 8.1 使用包、Crate 和模块管理不断增长的项目
 ---
 
-> [ch07-00-managing-growing-projects-with-packages-crates-and-modules.md](https://github.com/rust-lang/book/blob/main/src/ch07-00-managing-growing-projects-with-packages-crates-and-modules.md)
-> <br>
-> commit c77d7a1279dbc7a9d76e80c5ac9d742dd529538c
+:::info
+[ch07-00-managing-growing-projects-with-packages-crates-and-modules.md](https://github.com/rust-lang/book/blob/main/src/ch07-00-managing-growing-projects-with-packages-crates-and-modules.md)
+<br>
+commit c77d7a1279dbc7a9d76e80c5ac9d742dd529538c
+:::
 
 当你编写大型程序时，组织你的代码显得尤为重要。通过对相关功能进行分组和划分不同功能的代码，你可以清楚在哪里可以找到实现了特定功能的代码，以及在哪里可以改变一个功能的工作方式。
 

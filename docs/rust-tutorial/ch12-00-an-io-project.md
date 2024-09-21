@@ -2,9 +2,11 @@
 title: 13.1 一个 I/O 项目：构建一个命令行程序
 ---
 
-> [ch12-00-an-io-project.md](https://github.com/rust-lang/book/blob/main/src/ch12-00-an-io-project.md)
-> <br>
-> commit 02a168ed346042f07010f8b65b4eeed623dd31d1
+:::info
+[ch12-00-an-io-project.md](https://github.com/rust-lang/book/blob/main/src/ch12-00-an-io-project.md)
+<br>
+commit 02a168ed346042f07010f8b65b4eeed623dd31d1
+:::
 
 本章既是一个目前所学的很多技能的概括，也是一个更多标准库功能的探索。我们将构建一个与文件和命令行输入/输出交互的命令行工具来练习现在一些你已经掌握的 Rust 技能。
 

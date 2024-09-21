@@ -2,9 +2,11 @@
 title: 8.4 引用模块项目的路径
 ---
 
-> [ch07-03-paths-for-referring-to-an-item-in-the-module-tree.md](https://github.com/rust-lang/book/blob/main/src/ch07-03-paths-for-referring-to-an-item-in-the-module-tree.md)
-> <br>
-> commit 2b4565662d1a7973d870744a923f58f8f7dcce91
+:::info
+[ch07-03-paths-for-referring-to-an-item-in-the-module-tree.md](https://github.com/rust-lang/book/blob/main/src/ch07-03-paths-for-referring-to-an-item-in-the-module-tree.md)
+<br>
+commit 2b4565662d1a7973d870744a923f58f8f7dcce91
+:::
 
 来看一下 Rust 如何在模块树中找到一个项的位置，我们使用路径的方式，就像在文件系统使用路径一样。为了调用一个函数，我们需要知道它的路径。
 
@@ -187,13 +189,12 @@ pub fn eat_at_restaurant() {
 
 如果你计划共享你的库 crate 以便其它项目可以使用你的代码，公有 API 将是决定 crate 用户如何与你代码交互的契约。关于管理公有 API 的修改以便被人更容易依赖你的库有着很多考量。这些考量超出了本书的范畴；如果你对这些话题感兴趣，请查阅 [The Rust API Guidelines][api-guidelines]
 
-> ### 二进制和库 crate 包的最佳实践
->
-> 我们提到过包（package）可以同时包含一个 *src/main.rs* 二进制 crate 根和一个 *src/lib.rs* 库 crate 根，并且这两个 crate 默认以包名来命名。通常，这种包含二进制 crate 和库 crate 的模式的包，在二进制 crate 中只保留足以生成一个可执行文件的代码，并由可执行文件调用库 crate 的代码。又因为库 crate 可以共享，这使得其它项目从包提供的大部分功能中受益。
->
-> 模块树应该定义在 *src/lib.rs* 中。这样通过以包名开头的路径，公有项就可以在二进制 crate 中使用。二进制 crate 就变得同其它在该 crate 之外的、使用库 crate 的用户一样：二者都只能使用公有 API。这有助于你设计一个好的 API；你不仅仅是作者，也是用户！
-> 
+:::info
+### 二进制和库 crate 包的最佳实践
+>我们提到过包（package）可以同时包含一个 *src/main.rs* 二进制 crate 根和一个 *src/lib.rs* 库 crate 根，并且这两个 crate 默认以包名来命名。通常，这种包含二进制 crate 和库 crate 的模式的包，在二进制 crate 中只保留足以生成一个可执行文件的代码，并由可执行文件调用库 crate 的代码。又因为库 crate 可以共享，这使得其它项目从包提供的大部分功能中受益。
+>模块树应该定义在 *src/lib.rs* 中。这样通过以包名开头的路径，公有项就可以在二进制 crate 中使用。二进制 crate 就变得同其它在该 crate 之外的、使用库 crate 的用户一样：二者都只能使用公有 API。这有助于你设计一个好的 API；你不仅仅是作者，也是用户！
 > 在[第十二章][ch12]我们会通过一个同时包含二进制 crate 和库 crate 的命令行程序来展示这些包组织上的实践。
+:::
 
 ### `super` 开始的相对路径
 

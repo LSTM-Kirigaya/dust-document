@@ -2,9 +2,11 @@
 title: 12.3 控制测试如何运行
 ---
 
-> [ch11-02-running-tests.md](https://github.com/rust-lang/book/blob/main/src/ch11-02-running-tests.md)
-> <br>
-> commit 34314c10f699cc882d4e0b06f2a24bd37a5435f2
+:::info
+[ch11-02-running-tests.md](https://github.com/rust-lang/book/blob/main/src/ch11-02-running-tests.md)
+<br>
+commit 34314c10f699cc882d4e0b06f2a24bd37a5435f2
+:::
 
 就像 `cargo run` 会编译代码并运行生成的二进制文件一样，`cargo test` 在测试模式下编译代码并运行生成的测试二进制文件。`cargo test` 产生的二进制文件的默认行为是并发运行所有的测试，并截获测试运行过程中产生的输出，阻止它们被显示出来，使得阅读测试结果相关的内容变得更容易。不过可以指定命令行参数来改变 `cargo test` 的默认行为。
 

@@ -2,9 +2,11 @@
 title: 14.1 Rust 中的函数式语言功能：迭代器与闭包
 ---
 
-> [ch13-00-functional-features.md](https://github.com/rust-lang/book/blob/main/src/ch13-00-functional-features.md)
-> <br>
-> commit daa268a0cd04ef76a8067a26ed7d28ec2a9336d3
+:::info
+[ch13-00-functional-features.md](https://github.com/rust-lang/book/blob/main/src/ch13-00-functional-features.md)
+<br>
+commit daa268a0cd04ef76a8067a26ed7d28ec2a9336d3
+:::
 
 Rust 的设计灵感来源于很多现存的语言和技术。其中一个显著的影响就是 **函数式编程**（*functional programming*）。函数式编程风格通常包含将函数作为参数值或其他函数的返回值、将函数赋值给变量以供之后执行等等。
 

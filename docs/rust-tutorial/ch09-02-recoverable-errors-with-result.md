@@ -2,9 +2,11 @@
 title: 10.3 用 Result 处理可恢复的错误
 ---
 
-> [ch09-02-recoverable-errors-with-result.md](https://github.com/rust-lang/book/blob/main/src/ch09-02-recoverable-errors-with-result.md)
-> <br>
-> commit 699adc6f5cb76f6e9d567ff0a57d8a844ac07a88
+:::info
+[ch09-02-recoverable-errors-with-result.md](https://github.com/rust-lang/book/blob/main/src/ch09-02-recoverable-errors-with-result.md)
+<br>
+commit 699adc6f5cb76f6e9d567ff0a57d8a844ac07a88
+:::
 
 大部分错误并没有严重到需要程序完全停止执行。有时候，一个函数失败，仅仅就是因为一个容易理解和响应的原因。例如，如果因为打开一个并不存在的文件而失败，此时我们可能想要创建这个文件，而不是终止进程。
 
@@ -108,30 +110,27 @@ fn main() {
 
 我们希望在内层 `match` 中检查的条件是 `error.kind()` 的返回值是否为 `ErrorKind`的 `NotFound` 成员。如果是，则尝试通过 `File::create` 创建文件。然而因为 `File::create` 也可能会失败，还需要增加一个内层 `match` 语句。当文件不能被创建，会打印出一个不同的错误信息。外层 `match` 的最后一个分支保持不变，这样对任何除了文件不存在的错误会使程序 panic。
 
-> 不同于使用 `match` 和 `Result<T, E>`
->
-> 这里有好多 `match`！`match` 确实很强大，不过也非常的原始。第十三章我们会介绍闭包（closure），它会和定义在 `Result<T, E>` 中的很多方法一起使用。在处理代码中的 `Result<T, E>` 值时，相比于使用 `match` ，使用这些方法会更加简洁。
->
-> 例如，这是另一个编写与示例 9-5 逻辑相同但是使用闭包和 `unwrap_or_else` 方法的例子：
->
-> ```rust
-> use std::fs::File;
-> use std::io::ErrorKind;
->
-> fn main() {
->     let greeting_file = File::open("hello.txt").unwrap_or_else(|error| {
->         if error.kind() == ErrorKind::NotFound {
->             File::create("hello.txt").unwrap_or_else(|error| {
->                 panic!("Problem creating the file: {:?}", error);
->             })
->         } else {
->             panic!("Problem opening the file: {:?}", error);
->         }
->     });
-> }
-> ```
->
-> 虽然这段代码有着如示例 9-5 一样的行为，但并没有包含任何 `match` 表达式且更容易阅读。在阅读完第十三章后再回到这个例子，并查看标准库文档 `unwrap_or_else` 方法都做了什么操作。在处理错误时，还有很多这类方法可以消除大量嵌套的 `match` 表达式。
+:::info
+不同于使用 `match` 和 `Result<T, E>`
+>这里有好多 `match`！`match` 确实很强大，不过也非常的原始。第十三章我们会介绍闭包（closure），它会和定义在 `Result<T, E>` 中的很多方法一起使用。在处理代码中的 `Result<T, E>` 值时，相比于使用 `match` ，使用这些方法会更加简洁。
+>例如，这是另一个编写与示例 9-5 逻辑相同但是使用闭包和 `unwrap_or_else` 方法的例子：
+>```rust
+use std::fs::File;
+use std::io::ErrorKind;
+>fn main() {
+let greeting_file = File::open("hello.txt").unwrap_or_else(|error| {
+if error.kind() == ErrorKind::NotFound {
+File::create("hello.txt").unwrap_or_else(|error| {
+panic!("Problem creating the file: {:?}", error);
+})
+} else {
+panic!("Problem opening the file: {:?}", error);
+}
+});
+}
+```
+>虽然这段代码有着如示例 9-5 一样的行为，但并没有包含任何 `match` 表达式且更容易阅读。在阅读完第十三章后再回到这个例子，并查看标准库文档 `unwrap_or_else` 方法都做了什么操作。在处理错误时，还有很多这类方法可以消除大量嵌套的 `match` 表达式。
+:::
 
 ### 失败时 panic 的简写：`unwrap` 和 `expect`
 

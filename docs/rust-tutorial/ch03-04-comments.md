@@ -2,9 +2,11 @@
 title: 4.5 注释
 ---
 
-> [ch03-04-comments.md](https://github.com/rust-lang/book/blob/main/src/ch03-04-comments.md)
-> <br>
-> commit d0acb2595c891de97a133d06635c50ab449dd65c
+:::info
+[ch03-04-comments.md](https://github.com/rust-lang/book/blob/main/src/ch03-04-comments.md)
+<br>
+commit d0acb2595c891de97a133d06635c50ab449dd65c
+:::
 
 所有程序员都力求使其代码易于理解，不过有时还需要提供额外的解释。在这种情况下，程序员在源码中留下 **注释**（*comments*），编译器会忽略它们，不过阅读代码的人可能觉得有用。
 

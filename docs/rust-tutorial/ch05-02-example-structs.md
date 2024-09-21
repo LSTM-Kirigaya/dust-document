@@ -2,9 +2,11 @@
 title: 6.3 结构体示例程序
 ---
 
-> [ch05-02-example-structs.md](https://github.com/rust-lang/book/blob/main/src/ch05-02-example-structs.md)
-> <br>
-> commit 8612c4a5801b61f8d2e952f8bbbb444692ff1ec2
+:::info
+[ch05-02-example-structs.md](https://github.com/rust-lang/book/blob/main/src/ch05-02-example-structs.md)
+<br>
+commit 8612c4a5801b61f8d2e952f8bbbb444692ff1ec2
+:::
 
 为了理解何时会需要使用结构体，让我们编写一个计算长方形面积的程序。我们会从单独的变量开始，接着重构程序直到使用结构体替代它们为止。
 
@@ -216,7 +218,9 @@ rect1 is Rectangle {
 
 另一种使用 `Debug` 格式打印数值的方法是使用 [`dbg!` 宏][dbg]。`dbg!` 宏接收一个表达式的所有权（与 `println!` 宏相反，后者接收的是引用），打印出代码中调用 dbg! 宏时所在的文件和行号，以及该表达式的结果值，并返回该值的所有权。
 
-> 注意：调用 `dbg!` 宏会打印到标准错误控制台流（`stderr`），与 `println!` 不同，后者会打印到标准输出控制台流（`stdout`）。我们将在[第十二章 “将错误信息写入标准错误而不是标准输出” 一节][err]中更多地讨论 `stderr` 和 `stdout`。
+:::info
+注意：调用 `dbg!` 宏会打印到标准错误控制台流（`stderr`），与 `println!` 不同，后者会打印到标准输出控制台流（`stdout`）。我们将在[第十二章 “将错误信息写入标准错误而不是标准输出” 一节][err]中更多地讨论 `stderr` 和 `stdout`。
+:::
 
 下面是一个例子，我们对分配给 `width` 字段的值以及 `rect1` 中整个结构的值感兴趣。
 

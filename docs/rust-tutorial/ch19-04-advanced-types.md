@@ -2,13 +2,17 @@
 title: 20.5 高级类型
 ---
 
-> [ch19-04-advanced-types.md](https://github.com/rust-lang/book/blob/main/src/ch19-04-advanced-types.md)
-> <br>
-> commit 95e931170404cb98d476b19017cbbdbc00d0834d
+:::info
+[ch19-04-advanced-types.md](https://github.com/rust-lang/book/blob/main/src/ch19-04-advanced-types.md)
+<br>
+commit 95e931170404cb98d476b19017cbbdbc00d0834d
+:::
 
 Rust 的类型系统有一些我们曾经提到但没有讨论过的功能。首先我们从一个关于为什么 newtype 与类型一样有用的更宽泛的讨论开始。接着会转向类型别名（type aliases），一个类似于 newtype 但有着稍微不同的语义的功能。我们还会讨论 `!` 类型和动态大小类型。
 
-> 这一部分假设你已经阅读了之前的 [“newtype 模式用于在外部类型上实现外部 trait”][using-the-newtype-pattern] 部分。
+:::info
+这一部分假设你已经阅读了之前的 [“newtype 模式用于在外部类型上实现外部 trait”][using-the-newtype-pattern] 部分。
+:::
 
 ### 为了类型安全和抽象而使用 newtype 模式
 

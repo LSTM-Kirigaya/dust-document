@@ -2,9 +2,11 @@
 title: 9.4 使用 Hash Map 储存键值对
 ---
 
-> [ch08-03-hash-maps.md](https://github.com/rust-lang/book/blob/main/src/ch08-03-hash-maps.md)
-> <br>
-> commit 50775360ba3904c41e84176337ff47e6e7d6177c
+:::info
+[ch08-03-hash-maps.md](https://github.com/rust-lang/book/blob/main/src/ch08-03-hash-maps.md)
+<br>
+commit 50775360ba3904c41e84176337ff47e6e7d6177c
+:::
 
 最后介绍的常用集合类型是 **哈希 map**（*hash map*）。`HashMap<K, V>` 类型储存了一个键类型 `K` 对应一个值类型 `V` 的映射。它通过一个 **哈希函数**（*hashing function*）来实现映射，决定如何将键和值放入内存中。很多编程语言支持这种数据结构，不过通常有不同的名字：哈希、map、对象、哈希表或者关联数组，仅举几例。
 

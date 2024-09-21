@@ -2,9 +2,11 @@
 title: 10.4 要不要 panic!
 ---
 
-> [ch09-03-to-panic-or-not-to-panic.md](https://github.com/rust-lang/book/blob/main/src/ch09-03-to-panic-or-not-to-panic.md)
-> <br>
-> commit dd8f47a74b67178cea8c832e3b4eaf3bb515bd72
+:::info
+[ch09-03-to-panic-or-not-to-panic.md](https://github.com/rust-lang/book/blob/main/src/ch09-03-to-panic-or-not-to-panic.md)
+<br>
+commit dd8f47a74b67178cea8c832e3b4eaf3bb515bd72
+:::
 
 那么，该如何决定何时应该 `panic!` 以及何时应该返回 `Result` 呢？如果代码 panic，就没有恢复的可能。你可以选择对任何错误场景都调用 `panic!`，不管是否有可能恢复，不过这样就是你代替调用者决定了这是不可恢复的。选择返回 `Result` 值的话，就将选择权交给了调用者，而不是代替他们做出决定。调用者可能会选择以符合他们场景的方式尝试恢复，或者也可能干脆就认为 `Err` 是不可恢复的，所以他们也可能会调用 `panic!` 并将可恢复的错误变成了不可恢复的错误。因此返回 `Result` 是定义可能会失败的函数的一个好的默认选择。
 

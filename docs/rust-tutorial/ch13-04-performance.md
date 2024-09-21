@@ -2,9 +2,11 @@
 title: 14.5 性能对比：循环 VS 迭代器
 ---
 
-> [ch13-04-performance.md](https://github.com/rust-lang/book/blob/main/src/ch13-04-performance.md)
-> <br>
-> commit 009fffa4580ffb175f1b8470b5b12e4a63d670e4
+:::info
+[ch13-04-performance.md](https://github.com/rust-lang/book/blob/main/src/ch13-04-performance.md)
+<br>
+commit 009fffa4580ffb175f1b8470b5b12e4a63d670e4
+:::
 
 为了决定是否使用循环或迭代器，你需要了解哪个实现更快：使用显式 `for` 循环的 `search` 函数版本，还是使用迭代器的版本。
 
@@ -19,13 +21,12 @@ test bench_search_iter ... bench:  19,234,900 ns/iter (+/- 657,200)
 
 对于一个更全面的性能测试，你应该使用不同大小的文本作为 `contents`，不同的单词以及长度各异的单词作为 `query`，以及各种其他变化进行检查。关键在于：迭代器，作为一个高级的抽象，被编译成了与手写的底层代码大体一致性能的代码。迭代器是 Rust 的 **零成本抽象**（*zero-cost abstractions*）之一，它意味着抽象并不会引入额外的运行时开销，它与本贾尼·斯特劳斯特卢普（C++ 的设计和实现者）在 “Foundations of C++”（2012）中所定义的 **零开销**（*zero-overhead*）如出一辙：
 
-> In general, C++ implementations obey the zero-overhead principle: What you don't use, you don't pay for. And further: What you do use, you couldn't hand code any better.
->
-> - Bjarne Stroustrup "Foundations of C++"
->
-> 从整体来说，C++ 的实现遵循了零开销原则：你不需要的，无需为它买单。更有甚者的是：你需要的时候，也无法通过手写代码做得更好。
->
-> - 本贾尼·斯特劳斯特卢普 "Foundations of C++"
+:::info
+In general, C++ implementations obey the zero-overhead principle: What you don't use, you don't pay for. And further: What you do use, you couldn't hand code any better.
+>- Bjarne Stroustrup "Foundations of C++"
+>从整体来说，C++ 的实现遵循了零开销原则：你不需要的，无需为它买单。更有甚者的是：你需要的时候，也无法通过手写代码做得更好。
+>- 本贾尼·斯特劳斯特卢普 "Foundations of C++"
+:::
 
 作为另一个例子，以下代码取自一个音频解码器。解码算法使用线性预测数学运算（linear prediction mathematical operation）来根据之前样本的线性函数预测将来的值。这些代码使用迭代器链对作用域中的三个变量进行某种数学计算：一个叫 `buffer` 的数据 slice、一个有 12 个元素的数组 `coefficients`、和一个代表位数据位移量的 `qlp_shift`。我们在这个例子中声明了这些变量，但没有为它们赋值；虽然这些代码在其上下文之外没有太多意义，不过仍是一个简明的现实例子，来展示 Rust 如何将高级概念转换为底层代码。
 

@@ -2,9 +2,11 @@
 title: 11.2 泛型数据类型
 ---
 
-> [ch10-01-syntax.md](https://github.com/rust-lang/book/blob/main/src/ch10-01-syntax.md)
-> <br>
-> commit f2a78f64b668f63f581203c6bac509903f7c00ee
+:::info
+[ch10-01-syntax.md](https://github.com/rust-lang/book/blob/main/src/ch10-01-syntax.md)
+<br>
+commit f2a78f64b668f63f581203c6bac509903f7c00ee
+:::
 
 我们可以使用泛型为像函数签名或结构体这样的项创建定义，这样它们就可以用于多种不同的具体数据类型。让我们看看如何使用泛型定义函数、结构体、枚举和方法，然后我们将讨论泛型如何影响代码性能。
 

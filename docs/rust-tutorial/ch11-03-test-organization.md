@@ -2,9 +2,11 @@
 title: 12.4 测试的组织结构
 ---
 
-> [ch11-03-test-organization.md](https://github.com/rust-lang/book/blob/main/src/ch11-03-test-organization.md)
-> <br>
-> commit 654d8902d380dbb8dd94ed2e548dfc0aa80c07cb
+:::info
+[ch11-03-test-organization.md](https://github.com/rust-lang/book/blob/main/src/ch11-03-test-organization.md)
+<br>
+commit 654d8902d380dbb8dd94ed2e548dfc0aa80c07cb
+:::
 
 本章一开始就提到，测试是一个复杂的概念，而且不同的开发者也采用不同的技术和组织。Rust 社区倾向于根据测试的两个主要分类来考虑问题：**单元测试**（*unit tests*）与 **集成测试**（*integration tests*）。单元测试倾向于更小而更集中，在隔离的环境中一次测试一个模块，或者是测试私有接口。而集成测试对于你的库来说则完全是外部的。它们与其他外部代码一样，通过相同的方式使用你的代码，只测试公有接口而且每个测试都有可能会测试多个模块。
 

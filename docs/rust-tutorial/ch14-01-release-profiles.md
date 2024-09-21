@@ -2,9 +2,11 @@
 title: 15.2 采用发布配置自定义构建
 ---
 
-> [ch14-01-release-profiles.md](https://github.com/rust-lang/book/blob/main/src/ch14-01-release-profiles.md)
-> <br>
-> commit 44e31f9f304e0cd9ace01045d17a2aa01a449528
+:::info
+[ch14-01-release-profiles.md](https://github.com/rust-lang/book/blob/main/src/ch14-01-release-profiles.md)
+<br>
+commit 44e31f9f304e0cd9ace01045d17a2aa01a449528
+:::
 
 在 Rust 中 **发布配置**（*release profiles*）文件是预定义和可定制的，它们包含不同的配置，允许程序员更灵活地控制代码编译的多种选项。每一个配置都相互独立。
 

@@ -2,9 +2,11 @@
 title: 17.2 使用线程同时运行代码
 ---
 
-> [ch16-01-threads.md](https://github.com/rust-lang/book/blob/main/src/ch16-01-threads.md)
-> <br>
-> commit 8aecae3efe5ca8f79f055b70f05d9a3f990bce7b
+:::info
+[ch16-01-threads.md](https://github.com/rust-lang/book/blob/main/src/ch16-01-threads.md)
+<br>
+commit 8aecae3efe5ca8f79f055b70f05d9a3f990bce7b
+:::
 
 在大部分现代操作系统中，已执行程序的代码在一个 **进程**（_process_）中运行，操作系统则会负责管理多个进程。在程序内部，也可以拥有多个同时运行的独立部分。这些运行这些独立部分的功能被称为 **线程**（_threads_）。例如，web 服务器可以有多个线程以便可以同时响应多个请求。
 

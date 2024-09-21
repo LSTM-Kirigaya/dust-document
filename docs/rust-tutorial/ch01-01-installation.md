@@ -2,18 +2,23 @@
 title: 2.2 安装
 ---
 
-> [ch01-01-installation.md](https://github.com/rust-lang/book/blob/main/src/ch01-01-installation.md) <br>
-> commit 2bd5d42c9956369132228da6409f0e68da56c51a
+:::info
+[ch01-01-installation.md](https://github.com/rust-lang/book/blob/main/src/ch01-01-installation.md) <br>
+commit 2bd5d42c9956369132228da6409f0e68da56c51a
+:::
 
 第一步是安装 Rust。我们会通过 `rustup` 下载 Rust，这是一个管理 Rust 版本和相关工具的命令行工具。下载时需要联网。
 
-> 注意：如果你出于某些理由倾向于不使用 `rustup`，请到 [Rust 的其他安装方法页面][otherinstall] 查看其它安装选项。
+:::info
+注意：如果你出于某些理由倾向于不使用 `rustup`，请到 [Rust 的其他安装方法页面][otherinstall] 查看其它安装选项。
+:::
 
 接下来的步骤会安装最新的稳定版 Rust 编译器。Rust 的稳定性确保本书所有示例在最新版本的 Rust 中能够继续编译。不同版本的输出可能略有不同，因为 Rust 经常改进错误信息和警告。也就是说，任何通过这些步骤安装的最新稳定版 Rust，都应该能正常运行本书中的内容。
 
-> ### 命令行标记
->
-> 本章和全书中，我们会展示一些在终端中使用的命令。所有需要输入到终端的行都以 `$` 开头。你不需要输入`$`字符；这里显示的`$`字符表示命令行提示符，仅用于提示每行命令的起点。不以 `$` 起始的行通常展示前一个命令的输出。另外，PowerShell 专用的示例会采用 `>` 而不是 `$`。
+:::info
+### 命令行标记
+>本章和全书中，我们会展示一些在终端中使用的命令。所有需要输入到终端的行都以 `$` 开头。你不需要输入`$`字符；这里显示的`$`字符表示命令行提示符，仅用于提示每行命令的起点。不以 `$` 起始的行通常展示前一个命令的输出。另外，PowerShell 专用的示例会采用 `>` 而不是 `$`。
+:::
 
 ### 在 Linux 或 macOS 上安装 `rustup`
 
@@ -67,20 +72,26 @@ rustc x.y.z (abcabcabc yyyy-mm-dd)
 
 如果看到了这样的信息，就说明 Rust 已经安装成功了！
 
-> 译者：恭喜入坑！（此处应该有掌声！）
+:::info
+译者：恭喜入坑！（此处应该有掌声！）
+:::
 
 如果没看到，请按照下面说明的方法检查 Rust 是否在您的 `%PATH%` 系统变量中。
 
 在 Windows CMD 中，请使用命令：
 
 ```console
-> echo %PATH%
+:::info
+echo %PATH%
+:::
 ```
 
 在 PowerShell 中，请使用命令：
 
 ```powershell
-> echo $env:Path
+:::info
+echo $env:Path
+:::
 ```
 
 在 Linux 和 macOS 中，请使用命令：

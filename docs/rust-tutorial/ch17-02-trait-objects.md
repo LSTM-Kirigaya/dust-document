@@ -2,9 +2,11 @@
 title: 18.3 顾及不同类型值的 trait 对象
 ---
 
-> [ch17-02-trait-objects.md](https://github.com/rust-lang/book/blob/main/src/ch17-02-trait-objects.md)
-> <br>
-> commit 96d4b0ec1c5e019b85604c33ceee68b3e2669d40
+:::info
+[ch17-02-trait-objects.md](https://github.com/rust-lang/book/blob/main/src/ch17-02-trait-objects.md)
+<br>
+commit 96d4b0ec1c5e019b85604c33ceee68b3e2669d40
+:::
 
 在第八章中，我们谈到了 vector 只能存储同种类型元素的局限。示例 8-9 中提供了一个替代方案，通过定义 `SpreadsheetCell` 枚举，来储存整型、浮点型或文本类型的成员。这意味着，我们可以在每个单元中储存不同类型的数据，并仍能拥有一个代表一排单元的 vector。只要我们需存储的值由一组固定的类型组成，并且在代码编译时就知道具体会有哪些类型，那么这种使用枚举的办法是完全可行的。
 
