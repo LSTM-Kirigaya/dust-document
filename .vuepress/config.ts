@@ -798,6 +798,40 @@ export default defineUserConfig({
                         "appendix-07-nightly-rust",
                     ],
                 },
+            ],
+            "/blogs/i18n-haru/main.html": [
+                {
+                    text: "目录",
+                    children: [
+                        "/docs/i18n-haru/0",
+                        "/docs/i18n-haru/2",
+                        "/docs/i18n-haru/1",
+                        "/docs/i18n-haru/3",
+                        "/docs/i18n-haru/4",
+                    ]
+                }
+            ],
+            "/docs/i18n-haru/": [
+                {
+                    text: "基本介绍",
+                    children: [
+                        "0",
+                        "2"
+                    ],
+                },
+                {
+                    text: "插件配置",
+                    children: [
+                        "1",
+                    ],
+                },
+                {
+                    text: "插件使用",
+                    children: [
+                        "3",
+                        "4"
+                    ],
+                }
             ]
         },
         navbar: [

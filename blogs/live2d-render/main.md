@@ -7,6 +7,7 @@ categories:
  - 技术
 tags:
  - live2d
+ - 我的开源作品
  - 技术文档
 
 isShowTitleInHome: true
@@ -28,7 +29,6 @@ actionText: About
 - 使用前请确保你的 Live2d 模型的文件都是英文，如果是中文可能会出问题。
 :::
 
----
 
 ## 安装与使用
 

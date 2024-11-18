@@ -7,6 +7,7 @@ categories:
  - 技术
 tags:
  - qq
+ - 我的开源作品
  - 技术文档
 
 isShowTitleInHome: true

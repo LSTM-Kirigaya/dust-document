@@ -31,5 +31,19 @@
             "<center>$2</center>"
         ],
         "description": "居中图像"
+    },
+    "code-group": {
+        "prefix": "code group",
+        "body": [
+            ":::: code-group",
+            "::: code-group-item bundle.en.json",
+            "",
+            ":::",
+            "::: code-group-item bundle.zh-cn.json",
+            "",
+            ":::",
+            "::::"
+        ],
+        "description": "VuePress code group snippet"
     }
 }
