@@ -805,7 +805,7 @@ export default defineUserConfig({
                     children: [
                         "/docs/i18n-haru/0",
                         "/docs/i18n-haru/2",
-                        "/docs/i18n-haru/1",
+                        "/docs/i18n-haru/config",
                         "/docs/i18n-haru/3",
                         "/docs/i18n-haru/4",
                     ]
@@ -822,7 +822,7 @@ export default defineUserConfig({
                 {
                     text: "插件配置",
                     children: [
-                        "1",
+                        "config",
                     ],
                 },
                 {
