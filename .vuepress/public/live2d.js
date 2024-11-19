@@ -1,26 +1,52 @@
+if (window.hasLaunchLive2d === undefined) {
+    window.hasLaunchLive2d = false;
+}
 
-window.onload = async () => {
-    if (!document.getElementById('live2d')) {
+function load(src) {
+    const script = document.createElement('script');
+    script.src = src;
 
-        await Live2dRender.initializeLive2D({
-            // live2d 所在区域的背景颜色
+    return new Promise((resolve, reject) => {
+        script.onload = () => {
+            console.log('finish loading lib from ' + src);
+            resolve();
+        };
+        script.onerror = (error) => {
+            console.error('Error loading lib from ' + src,  error);
+            reject(error);
+        };
+        document.head.appendChild(script);
+    });
+}
+
+async function launch() {
+    if (!document.getElementById('live2d') && window.hasLaunchLive2d === false) {
+        window.hasLaunchLive2d = true;
+        await load('https://cdn.jsdelivr.net/npm/live2d-render@0.0.5/bundle.js');
+        const config = {
             BackgroundRGBA: [0.0, 0.0, 0.0, 0.0],
-        
-            // live2d 的 model3.json 文件的相对路径
             ResourcesPath: '/cat/sdwhite cat b.model3.json',
-        
-            // live2d 的大小
             CanvasSize: {
                 height: 500,
                 width: 400
             },
-        
+            loadIndex: 0,
+            LoadFromCache: true,
             ShowToolBox: true,
         
-            // 是否使用 indexDB 进行缓存优化，这样下一次载入就不会再发起网络请求了
-            LoadFromCache: true
-        
-        });
+            MinifiedJSUrl: 'https://kirigaya.cn/files/web/minified.js',
+            Live2dCubismcoreUrl: 'https://kirigaya.cn/files/web/live2dcubismcore.min.js'
+        }
+        const screenWidth = Math.round(screen.width * window.devicePixelRatio);
+        const scaleRatio = Math.max(0.76, screenWidth / 3840);
+        const configSize = config.CanvasSize;
+        config.CanvasSize.height = configSize.height * scaleRatio;
+        config.CanvasSize.width = configSize.width * scaleRatio;
+
+        await Live2dRender.initializeLive2D(config);
         console.log('finish load');
     }
 }
+
+launch();
+window.onload = launch;

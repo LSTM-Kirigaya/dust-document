@@ -14,7 +14,7 @@ export default defineUserConfig({
     shouldPrefetch: false,
     
     head: [
-        ['script', { src: 'https://cdn.jsdelivr.net/npm/live2d-render@0.0.5/bundle.js'}],
+        // ['script', { src: 'https://cdn.jsdelivr.net/npm/live2d-render@0.0.5/bundle.js'}],
         ['script', { src: '/live2d.js' }],
     ],
     // head: [
