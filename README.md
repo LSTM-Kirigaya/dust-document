@@ -9,7 +9,7 @@ bannerBrand:
   bgImageStyle: 
     height: 600px
   title: 锦恢 | 文档库
-  description: If you cannot be a poet, be the poem.
+  description: Mirror the unknown
 
 isShowTitleInHome: true
 actionText: About

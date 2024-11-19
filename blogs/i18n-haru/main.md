@@ -33,12 +33,12 @@ actionText: About
 
 <detail-url
     href="https://zhuanlan.zhihu.com/p/3911309698"
+    logo="zhihu"
     title="因用不惯现有的 i18n 插件，所以我自己花了半天写一个拓展 | i18n Haru 简易文档"
     desc="亲爱的诸位朋友，好久没在知乎上写技术博客了，原因是这样的 ..."
 ></detail-url>
 
-为了更好地进行推广，我打算慢慢写完这个插件的使用教程。愿与诸君共勉。Github 项目链接
-
+为了更好地进行推广，我打算慢慢写完这个插件的使用教程。愿与诸君共勉。Github 项目链接如下，如果有任何问题，欢迎提 issue，如果有任何想要添加的功能欢迎 fork + PR。感谢您的每一个 star :D
 
 <detail-url
     href="https://github.com/LSTM-Kirigaya/i18n-Haru"

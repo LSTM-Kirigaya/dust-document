@@ -37,6 +37,7 @@ actionText: About
 
 <detail-url
     href="https://www.zhihu.com/question/659058271/answer/3538726616"
+    logo="zhihu"
     title="博客园页面的这个姑娘动画是怎么生成的？"
     desc="她好可爱哦。"
 ></detail-url>

@@ -803,33 +803,36 @@ export default defineUserConfig({
                 {
                     text: "目录",
                     children: [
-                        "/docs/i18n-haru/0",
-                        "/docs/i18n-haru/2",
+                        "/docs/i18n-haru/introduction",
                         "/docs/i18n-haru/config",
-                        "/docs/i18n-haru/3",
-                        "/docs/i18n-haru/4",
+                        "/docs/i18n-haru/usage"
                     ]
                 }
             ],
             "/docs/i18n-haru/": [
                 {
-                    text: "基本介绍",
+                    text: "一、基本介绍",
                     children: [
-                        "0",
-                        "2"
+                        "introduction",
+                        "introduction.message",
+                        "introduction.install"
                     ],
                 },
                 {
-                    text: "插件配置",
+                    text: "二、插件配置",
                     children: [
                         "config",
+                        "config.display",
+                        "config.custom-iso639",
                     ],
                 },
                 {
-                    text: "插件使用",
+                    text: "三、基础使用",
                     children: [
-                        "3",
-                        "4"
+                        "usage",
+                        "usage.lsp",
+                        "usage.manage",
+                        "usage.translation"
                     ],
                 }
             ]
