@@ -1,7 +1,8 @@
 import { defineUserConfig } from "vuepress";
 import type { DefaultThemeOptions } from "vuepress";
 import recoTheme from "vuepress-theme-reco";
-import katex from 'markdown-it-katex';
+// import katex from 'markdown-it-katex';
+import { katex } from '@mdit/plugin-katex'
 
 export default defineUserConfig({
     lang: "zh-CN",
@@ -16,12 +17,12 @@ export default defineUserConfig({
     head: [
         // ['script', { src: 'https://cdn.jsdelivr.net/npm/live2d-render@0.0.5/bundle.js'}],
         ['script', { src: '/live2d.js' }],
+        // ['link', { rel: 'stylesheet', href: 'https://kirigaya.cn/files/web/katex.min.css' }],
+        ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css' }], // 让md支持数学公式
+        ['link', { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js" }],  // 让md支持数学公式
+        ['link', { rel: 'stylesheet', href: 'https://cdn.bootcdn.net/ajax/libs/github-markdown-css/2.2.1/github-markdown.min.css' }]
     ],
-    // head: [
-    //     ['link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css' }],
-    //     ['link', { rel: 'stylesheet', href: 'https://cdn.bootcdn.net/ajax/libs/github-markdown-css/2.2.1/github-markdown.min.css' }],
-    //     ['script', { src: 'https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js'}],
-    // ],
+
     theme: recoTheme({
         style: "@vuepress-reco/style-default",
         logo: "/logo.png",
