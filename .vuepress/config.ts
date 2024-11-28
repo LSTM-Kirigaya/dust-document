@@ -1,8 +1,8 @@
 import { defineUserConfig } from "vuepress";
 import type { DefaultThemeOptions } from "vuepress";
 import recoTheme from "vuepress-theme-reco";
-// import katex from 'markdown-it-katex';
-import { katex } from '@mdit/plugin-katex'
+import katex from 'markdown-it-katex';
+// import { katex } from '@mdit/plugin-katex'
 
 export default defineUserConfig({
     lang: "zh-CN",
@@ -836,6 +836,40 @@ export default defineUserConfig({
                         "usage.translation"
                     ],
                 }
+            ],
+            "/blogs/rust-nom/main.html": [
+                {
+                    text: "目录",
+                    children: [
+                        "/docs/rust-nom/the-nom-way",
+                        "/docs/rust-nom/tags-and-character-classes",
+                        "/docs/rust-nom/alternatives-and-composition",
+                        "/docs/rust-nom/parsers-with-custom-return-types",
+                        "/docs/rust-nom/repeating-with-predicates",
+                        "/docs/rust-nom/repeating-parsers",
+                        "/docs/rust-nom/using-errors-from-outside-nom",
+                        "/docs/rust-nom/streaming-vs-complete",
+                        "/docs/rust-nom/characters-vs-bytes",
+                        "/docs/rust-nom/exercise-and-further-reading"
+                    ]
+                }
+            ],
+            "/docs/rust-nom/": [
+                {
+                    text: "Rust Nom 基础教程 (Nominomicon)",
+                    children: [
+                        "the-nom-way",
+                        "tags-and-character-classes",
+                        "alternatives-and-composition",
+                        "parsers-with-custom-return-types",
+                        "repeating-with-predicates",
+                        "repeating-parsers",
+                        "using-errors-from-outside-nom",
+                        "streaming-vs-complete",
+                        "characters-vs-bytes",
+                        "exercise-and-further-reading"
+                    ],
+                },
             ]
         },
         navbar: [

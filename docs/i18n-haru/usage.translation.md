@@ -16,15 +16,30 @@ title: 使用大模型快速完成你的翻译
 
 ![alt text](./images/select-translator.png)
 
-选择你需要的大模型后，再搜索 搜索 再配置一下 api key，配置一下 i18n Haru 翻译器的 api key
+选择你需要的大模型后，再搜索 api key，配置一下 i18n Haru 翻译器的大模型对应的 api key（API KEY 的获取可以点击上方表格中【API 文档】前往获取）
 
 ![alt text](./images/api-key.png)
 
-配置完成后，此时再进行 [添加 i18n token](https://document.kirigaya.cn/docs/i18n-haru/usage.manage.html#%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BA-i18n-token) 的操作时，后台会自动完成添加的这一条 i18n message 的翻译并将结果汇总写入各个 i18n 配置文件中，翻译过程中的状态会反应在 vscode 的 status bar 上：
+配置完成后，此时再进行 [添加 i18n token](https://document.kirigaya.cn/docs/i18n-haru/usage.manage.html#%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BA-i18n-token) 的操作时，后台会自动完成添加的这一条 i18n message 的翻译并将结果汇总写入各个 i18n 配置文件中，翻译过程中的状态会反应在 vscode 的状态栏上。具体步骤和效果如下：
 
-![alt text](./images/translate.llm.png)
+添加 i18n key
 
-当它转动消失时，代表当前的 message key 已经翻译完成。
+![alt text](./images/translate.0.png)
+
+填入 message key
+
+![alt text](./images/translate.1.png)
+
+此时，原本的文本会被 t 函数调用取代，并且下方的状态栏上会出现“使用【翻译器名字】翻译”的字样，代表当前正在请求并翻译。此时你可以继续打代码，不需要操心上面文本的翻译事项。
+
+
+![alt text](./images/translate.2.png)
+
+等到翻译好后（这与你的网络状态、大模型提供商和翻译文本的长度有关），上方会自动出现翻译好的结果：
+
+![alt text](./images/translate.3.png)
+
+## 使用的翻译 prompt
 
 为了不引起用户的顾虑，我将我采用的询问大模型的 prompt 放在这里，以供参考，如果有更好的 prompt，欢迎提 PR 或者 issue：
 
@@ -32,7 +47,6 @@ title: 使用大模型快速完成你的翻译
 export const translatePrompt = 'Please translate the value part of the following i18n message into languages corresponding to the language codes {0}, and return them as JSON strings mapped to their respective language codes. Do not include any markdown code blocks or any additional characters:';
 ```
 
----
 
 ## 通过网页版本大模型翻译的小工具
 
