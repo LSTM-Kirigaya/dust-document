@@ -22,7 +22,7 @@ function load(src) {
 async function launch() {
     if (!document.getElementById('live2d') && window.hasLaunchLive2d === false) {
         window.hasLaunchLive2d = true;
-        await load('https://cdn.jsdelivr.net/npm/live2d-render@0.0.5/bundle.js');
+        await load('https://cdn.jsdelivr.net/npm/live2d-render@0.0.6/bundle.js');
         const config = {
             BackgroundRGBA: [0.0, 0.0, 0.0, 0.0],
             ResourcesPath: '/cat/sdwhite cat b.model3.json',
@@ -37,12 +37,17 @@ async function launch() {
             MinifiedJSUrl: 'https://kirigaya.cn/files/web/minified.js',
             Live2dCubismcoreUrl: 'https://kirigaya.cn/files/web/live2dcubismcore.min.js'
         }
-        const screenWidth = Math.round(screen.width * window.devicePixelRatio);
-        const scaleRatio = Math.max(0.76, screenWidth / 3840);
-        const configSize = config.CanvasSize;
-        config.CanvasSize.height = configSize.height * scaleRatio;
-        config.CanvasSize.width = configSize.width * scaleRatio;
 
+        // 多分辨率适配
+        let screenWidth = Math.round(screen.width * window.devicePixelRatio);
+        
+        // 防止分辨率太大的时候宽度太大，导致渲染过大
+        screenWidth = Math.min(screenWidth, 3840);
+        const scaleRatio = Math.max(0.76, screenWidth / 3840);
+        
+        config.CanvasSize.height = config.CanvasSize.height * scaleRatio;
+        config.CanvasSize.width = config.CanvasSize.width * scaleRatio;
+        
         await Live2dRender.initializeLive2D(config);
         console.log('finish load');
     }

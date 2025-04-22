@@ -112,9 +112,9 @@ live2d.initializeLive2D({
 此时，当你把光标移动到模型上时，工具箱会透明度渐变动画自动浮现在模型左侧：
 
 <div align=center>
-<img src="https://pic1.zhimg.com/80/v2-8501d5198ae145e64a11af77a1222c1e_1440w.png" style="width: 300px;"/>
+<img src="https://picx.zhimg.com/80/v2-d624a4f978475c1ac12fcc316edfbad7_1440w.png" style="width: 300px;"/>
 </div>
 
 最上面的蓝色箭头用于 隐藏/展示 live2d 模型。
 
-下面一堆 E 开头的按钮用于展示表情，比如点击 `E2` 就是让模型表演预设的 2 号表情。
+第二个按钮悬停后出现的猫猫图标代表当前可用的表情。
